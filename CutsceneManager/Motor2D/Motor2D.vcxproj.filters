@@ -55,6 +55,9 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Engine\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="CutsceneManager.cpp">
+      <Filter>Engine\Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -125,6 +128,9 @@
     </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Engine\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneManager.h">
+      <Filter>Engine\Modules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,7 @@ class Audio;
 class SceneManager;
 class Map;
 class Pathfinding;
+class CutsceneManager;
 
 class j1App
 {
@@ -81,14 +82,15 @@ private:
 public:
 
 	// Modules
-	Window*			win;
-	Input*			input;
-	Render*			render;
-	Textures*		tex;
-	Audio*			audio;
-	SceneManager*	scene_manager;
-	Map*			map;
-	Pathfinding*	pathfinding;
+	Window*				win;
+	Input*				input;
+	Render*				render;
+	Textures*			tex;
+	Audio*				audio;
+	SceneManager*		scene_manager;
+	Map*				map;
+	Pathfinding*		pathfinding;
+	CutsceneManager*	cutscene_manager;
 
 private:
 

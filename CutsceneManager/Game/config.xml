@@ -22,6 +22,10 @@
     <path>data.zip</path>
   </file_system>
 
+  <cutscene_manager>
+    <path>cutscene.xml</path>
+  </cutscene_manager>
+
   <map>
     <folder>maps/</folder>
   </map>

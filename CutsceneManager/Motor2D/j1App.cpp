@@ -12,6 +12,7 @@
 #include "SceneManager.h"
 #include "Map.h"
 #include "Pathfinding.h"
+#include "CutsceneManager.h"
 #include "j1App.h"
 
 // Constructor
@@ -28,6 +29,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	scene_manager = new SceneManager();
 	map = new Map();
 	pathfinding = new Pathfinding();
+	cutscene_manager = new CutsceneManager();
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -38,6 +40,7 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(map);
 	AddModule(pathfinding);
 	AddModule(scene_manager);
+	AddModule(cutscene_manager);
 
 	// render last to swap buffer
 	AddModule(render);
