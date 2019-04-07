@@ -2,9 +2,8 @@
 #include "Render.h"
 #include "Textures.h"
 #include "Input.h"
-#include "DynamicEntity.h"
-#include "CardManager.h"
 #include "EntityManager.h"
+#include "Entity.h"
 
 
 
@@ -83,23 +82,9 @@ bool EntityManager::Save(pugi::xml_node &) const
 	return true;
 }
 
-bool EntityManager::CreateEntity(EntityType type, fPoint position, Card* card)
+bool EntityManager::CreateEntity(fPoint position)
 {
 	std::string id = std::to_string(id_count);
-	switch (type)
-	{
-	case EntityType::TROOP:
-	{
-		id += "_" + card->name;
-		DynamicEntity* entity = new DynamicEntity();
-		entity->SetCard(card);
-		entities.push_back(entity);
-	}
-		break;
-	case EntityType::BUILDING:
-		//TODO
-		break;
-	}
 
 	id_count++;
 

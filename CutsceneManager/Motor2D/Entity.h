@@ -6,11 +6,6 @@
 
 struct SDL_Texture;
 
-enum Faction {
-	AMERICAN,
-	RUSSIAN
-};
-
 class Entity
 {
 public:
@@ -32,6 +27,5 @@ protected:
 	SDL_Texture* sprite;
 	uint max_life;
 	uint current_life;
-	Faction faction;
 };
 #endif // _ENTITY_H_

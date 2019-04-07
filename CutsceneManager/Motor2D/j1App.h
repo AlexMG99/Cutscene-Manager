@@ -18,7 +18,6 @@ class Audio;
 class SceneManager;
 class Map;
 class Pathfinding;
-class CardManager;
 
 class j1App
 {
@@ -90,7 +89,6 @@ public:
 	SceneManager*	scene_manager;
 	Map*			map;
 	Pathfinding*	pathfinding;
-	CardManager*	card_manager;
 
 private:
 

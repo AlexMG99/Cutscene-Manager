@@ -6,11 +6,6 @@
 
 class Entity;
 
-enum EntityType {
-	BUILDING,
-	TROOP
-};
-
 class EntityManager : public Module
 {
 public:
@@ -27,7 +22,7 @@ public:
 	bool CleanUp();
 	bool Load(pugi::xml_node&);
 	bool Save(pugi::xml_node&) const;
-	bool CreateEntity(EntityType type, fPoint position, Card* card = nullptr);
+	bool CreateEntity(fPoint position);
 	bool DeleteEntity(Entity* entity);
 
 private:
