@@ -31,20 +31,20 @@ protected:
 	CutsceneCode code;
 };
 
-//class MoveX : public Cutscene
-//{
-//public:
-//	MoveX(uint32 start_time, uint32 end_time, Entity* actor, float speed) : Cutscene(start_time, end_time) {
-//		this->actor = actor;
-//		move_speed = speed;
-//	};
-//	~MoveX() {};
-//
-//	bool Execute();
-//private:
-//	Entity* actor = nullptr;
-//	float move_speed;
-//};
+class BuildingConstruction : public Cutscene
+{
+public:
+	BuildingConstruction(uint32 start_time, uint32 end_time, Entity* actor, float speed) : Cutscene(start_time, end_time, code) {
+		this->actor = actor;
+		this->speed = speed;
+	};
+	~BuildingConstruction() {};
+
+	bool Execute();
+private:
+	Entity* actor = nullptr;
+	float speed;
+};
 
 
 

@@ -38,3 +38,10 @@ bool CutsceneManager::LoadCutscene(CutsceneCode code)
 
 	return true;
 }
+
+bool BuildingConstruction::Execute()
+{
+
+
+	return true;
+}

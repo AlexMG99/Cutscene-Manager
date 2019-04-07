@@ -4,6 +4,7 @@
 #include "Input.h"
 #include "EntityManager.h"
 #include "Entity.h"
+#include "StaticEntity.h"
 
 
 
@@ -82,17 +83,22 @@ bool EntityManager::Save(pugi::xml_node &) const
 	return true;
 }
 
-bool EntityManager::CreateEntity(fPoint position)
+Entity* EntityManager::CreateEntity(fPoint position)
 {
 	std::string id = std::to_string(id_count);
 
+	StaticEntity* entity = new StaticEntity(position);
+	entities.push_back(entity);
+
 	id_count++;
 
-	return true;
+	return entity;
 }
 
 bool EntityManager::DeleteEntity(Entity * entity)
 {
+	entity->CleanUp();
 	entities.remove(entity);
+	delete entity;
 	return true;
 }

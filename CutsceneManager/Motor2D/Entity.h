@@ -1,15 +1,18 @@
 #ifndef _ENTITY_H_
 #define _ENTITY_H_
 
+#include <vector>
+
 #include "p2Defs.h"
 #include "p2Point.h"
+#include "Animation.h"
 
 struct SDL_Texture;
 
 class Entity
 {
 public:
-	Entity();
+	Entity(fPoint position);
 	~Entity();
 
 	virtual bool PreUpdate() { return true; };
@@ -17,15 +20,15 @@ public:
 	virtual bool PostUpdate() { return true; };
 	virtual bool CleanUp() { return true; };
 
-	void DecreaseLife(float damage);
-	virtual void Die() {};
+	void LoadAnimations();
+
 
 public:
 	fPoint position;
 
 protected:
-	SDL_Texture* sprite;
-	uint max_life;
-	uint current_life;
+	std::vector<Animation> animations;
+	SDL_Rect current_frame;
+	SDL_Texture* sprite = nullptr;
 };
 #endif // _ENTITY_H_
