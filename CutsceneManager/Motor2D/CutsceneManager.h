@@ -2,14 +2,8 @@
 #define _CUTSCENE_MANAGER_H__
 
 #include "Module.h"
+#include "Entity.h"
 #include "PerfTimer.h"
-
-
-enum CutsceneType
-{
-	PRE_RENDERED,
-	IN_GAME
-};
 
 enum CutsceneCode
 {
@@ -20,19 +14,37 @@ enum CutsceneCode
 class Cutscene {
 public:
 
-	Cutscene(uint start, uint end)
+	Cutscene(uint start, uint end, CutsceneCode code)
 	{
 		start_time = start;
-		end_time = start;
+		end_time = end;
+		this->code = code;
 	};
-	virtual ~Cutscene();
+
+	virtual ~Cutscene() {};
 
 	virtual bool Execute() { return true; };
 
-private:
+protected:
 	uint start_time;
 	uint end_time;
+	CutsceneCode code;
 };
+
+//class MoveX : public Cutscene
+//{
+//public:
+//	MoveX(uint32 start_time, uint32 end_time, Entity* actor, float speed) : Cutscene(start_time, end_time) {
+//		this->actor = actor;
+//		move_speed = speed;
+//	};
+//	~MoveX() {};
+//
+//	bool Execute();
+//private:
+//	Entity* actor = nullptr;
+//	float move_speed;
+//};
 
 
 
@@ -48,7 +60,7 @@ public:
 	bool Update(float dt) { return true; };
 	bool CleanUp() { return true; };
 
-	bool LoadCutscene(CutsceneCode code, CutsceneType type);
+	bool LoadCutscene(CutsceneCode code);
 	void ExecuteCutscene() {};
 
 private:

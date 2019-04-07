@@ -9,6 +9,7 @@
 #include "Map.h"
 #include "PathFinding.h"
 #include "TestingScene.h"
+#include "CutsceneManager.h"
 
 
 TestingScene::TestingScene() : Scene()
@@ -25,6 +26,7 @@ bool TestingScene::Start()
 {
 	App->map->Load("iso_walk.tmx");
 
+	App->cutscene_manager->LoadCutscene(CutsceneCode::CUTSCENE_1);
 	return true;
 }
 
