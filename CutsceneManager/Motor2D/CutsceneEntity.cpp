@@ -11,3 +11,8 @@ CutsceneEntity::~CutsceneEntity()
 {
 	App->entity_manager->DeleteEntity(entity);
 }
+
+Entity * CutsceneEntity::GetEntity()
+{
+	return entity;
+}

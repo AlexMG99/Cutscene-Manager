@@ -10,7 +10,9 @@ public:
 	CutsceneEntity(int pos_x, int pos_y, std::string name);
 	~CutsceneEntity();
 
-private:
+	Entity* GetEntity();
+
+protected:
 	Entity* entity = nullptr;
 
 };

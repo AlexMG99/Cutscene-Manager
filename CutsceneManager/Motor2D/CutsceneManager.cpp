@@ -1,6 +1,7 @@
 #include "CutsceneManager.h"
 #include "p2Log.h"
 #include "CutsceneMoveCamera.h"
+#include "CutsceneMoveEntity.h"
 #include "CutsceneEntity.h"
 #include "CutsceneMap.h"
 
@@ -42,6 +43,10 @@ bool CutsceneManager::LoadCutscene()
 		{
 			cutscene_action = new CutsceneMoveCamera(start, duration, cutscene_action_node.child("time").attribute("speed_x").as_int(), cutscene_action_node.child("time").attribute("speed_y").as_int());
 		}
+		else if (action == "move_entity")
+		{
+			cutscene_action = new CutsceneMoveEntity(start, duration, cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float());
+		}
 
 		actions.push_back(cutscene_action);
 	}
@@ -51,6 +56,7 @@ bool CutsceneManager::LoadCutscene()
 	for (pugi::xml_node cutscene_element_node = cutscene_file.first_child().child("elements").child("element"); cutscene_element_node; cutscene_element_node = cutscene_element_node.next_sibling())
 	{
 		std::string type = cutscene_element_node.attribute("type").as_string();
+		std::string name = cutscene_element_node.attribute("name").as_string();
 
 		if (type == "entity")
 		{
@@ -63,6 +69,7 @@ bool CutsceneManager::LoadCutscene()
 			cutscene_element = new CutsceneMap(cutscene_element_node.attribute("path").as_string());
 		}
 
+		elements.insert(std::pair <std::string, CutsceneElement*>(name, cutscene_element));
 	}
 
 	return true;

@@ -26,6 +26,7 @@ public:
 
 public:
 	fPoint position;
+	fPoint speed = { 0.0f, 0.0f };
 
 protected:
 	std::vector<Animation> animations;

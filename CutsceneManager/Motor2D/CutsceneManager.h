@@ -6,6 +6,7 @@
 #include "PerfTimer.h"
 #include "CutsceneAction.h"
 #include "CutsceneElement.h"
+#include <map>
 
 
 class CutsceneManager: public Module {
@@ -33,10 +34,11 @@ private:
 	bool is_executing = false;
 	bool start = true;
 
+public:
 	pugi::xml_document cutscene_file;
 	std::vector<CutsceneAction*> actions;
-	std::vector<CutsceneElement*> elements;
-
+	std::map<std::string, CutsceneElement*> elements;
+	
 	std::vector<CutsceneAction*>::iterator item;
 
 };

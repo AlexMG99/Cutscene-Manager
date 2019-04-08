@@ -27,6 +27,8 @@ public:
 	virtual bool PostUpdate();
 	virtual bool CleanUp();
 
+	void PerformActions();
+
 protected:
 	PlayerState state = IDLE_DOWN;
 };
