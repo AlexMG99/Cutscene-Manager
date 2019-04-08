@@ -45,7 +45,9 @@ bool CutsceneManager::LoadCutscene()
 		}
 		else if (action == "move_entity")
 		{
-			cutscene_action = new CutsceneMoveEntity(start, duration, cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float());
+			cutscene_action = new CutsceneMoveEntity(start, duration, 
+				cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float(),
+				cutscene_action_node.attribute("entity").as_string());
 		}
 
 		actions.push_back(cutscene_action);

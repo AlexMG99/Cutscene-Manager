@@ -41,4 +41,44 @@
       </left>
     </animations>
   </gold>
+  <silver>
+    <animations>
+      <i_down speed="5">
+        <frame x="160" y="4" w="23" h="23"/>
+      </i_down>
+      <i_right speed="5">
+        <frame x="163" y="91" w="18" h="23"/>
+      </i_right>
+      <i_up speed="5">
+        <frame x="159" y="61" w="25" h="26"/>
+      </i_up>
+      <i_left speed="5">
+        <frame x="163" y="33" w="18" h="23"/>
+      </i_left>
+      <down speed="5">
+        <frame x="160" y="4" w="23" h="23"/>
+        <frame x="131" y="4" w="23" h="25"/>
+        <frame x="160" y="4" w="23" h="23"/>
+        <frame x="189" y="4" w="23" h="25"/>
+      </down>
+      <right speed="5">
+        <frame x="163" y="91" w="18" h="23"/>
+        <frame x="138" y="91" w="18" h="24"/>
+        <frame x="163" y="91" w="18" h="23"/>
+        <frame x="187" y="91" w="18" h="24"/>
+      </right>
+      <up speed="5">
+        <frame x="159" y="61" w="25" h="26"/>
+        <frame x="136" y="61" w="25" h="24"/>
+        <frame x="159" y="61" w="25" h="26"/>
+        <frame x="136" y="61" w="25" h="26"/>
+      </up>
+      <left speed="5">
+        <frame x="163" y="33" w="18" h="23"/>
+        <frame x="140" y="33" w="19" h="24"/>
+        <frame x="163" y="33" w="18" h="23"/>
+        <frame x="187" y="33" w="19" h="24"/>
+      </left>
+    </animations>
+  </silver>
 </entities>

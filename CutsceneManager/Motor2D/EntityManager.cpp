@@ -88,10 +88,8 @@ Entity* EntityManager::CreateEntity(fPoint position, std::string path)
 {
 	std::string id = std::to_string(id_count);
 	Entity* entity = nullptr;
-	if (path == "gold")
-	{
-		entity = new Player(position, path);
-	}
+
+	entity = new Player(position, path);
 
 	entities.push_back(entity);
 	id_count++;

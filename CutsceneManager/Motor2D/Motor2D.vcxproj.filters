@@ -67,9 +67,11 @@
     <ClCompile Include="CutsceneEntity.cpp">
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="CutsceneMap.cpp" />
     <ClCompile Include="CutsceneMoveEntity.cpp">
       <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneMap.cpp">
+      <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

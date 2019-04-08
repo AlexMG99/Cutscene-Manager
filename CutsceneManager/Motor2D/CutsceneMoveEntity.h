@@ -6,13 +6,14 @@
 
 class CutsceneMoveEntity :public CutsceneAction {
 public:
-	CutsceneMoveEntity(uint start, uint duration, float speed_x, float speed_y);
+	CutsceneMoveEntity(uint start, uint duration, float speed_x, float speed_y, std::string entity);
 	~CutsceneMoveEntity() {};
 
 	void Execute(float dt);
 
 protected:
-	fPoint player_speed;
+	fPoint		 player_speed;
+	std::string	 entity_name;
 };
 
 
