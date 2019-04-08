@@ -88,6 +88,9 @@
     <ClCompile Include="UILabel.cpp">
       <Filter>Engine\UIElement</Filter>
     </ClCompile>
+    <ClCompile Include="CutsceneText.cpp">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -191,6 +194,9 @@
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Engine\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneText.h">
+      <Filter>Engine\Cutscenes\Elements</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

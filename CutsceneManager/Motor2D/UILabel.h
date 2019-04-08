@@ -13,7 +13,7 @@ public:
 	_TTF_Font* font;
 	std::string text;
 	SDL_Color color;
-	UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color, int max_width);
+	UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color = {255,255,255,255}, int max_width = 10);
 	~UILabel();
 	bool UIBlit();
 	void SetText(std::string text);
