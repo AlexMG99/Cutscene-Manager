@@ -4,14 +4,14 @@
 #include "Entity.h"
 
 enum PlayerState {
-	WALKING_DOWN = 0,
-	WALKING_RIGHT,
-	WALKING_UP,
-	WALKING_LEFT,
-	IDLE_DOWN,
+	IDLE_DOWN = 0,
 	IDLE_RIGHT,
 	IDLE_UP,
-	IDLE_LEFT
+	IDLE_LEFT,
+	WALKING_DOWN,
+	WALKING_RIGHT,
+	WALKING_UP,
+	WALKING_LEFT
 	
 };
 
@@ -19,7 +19,7 @@ enum PlayerState {
 class Player : public Entity
 {
 public:
-	Player(fPoint position);
+	Player(fPoint position, std::string path);
 	~Player();
 
 	virtual bool PreUpdate() { return true; };
@@ -28,7 +28,7 @@ public:
 	virtual bool CleanUp();
 
 protected:
-	PlayerState state = WALKING_DOWN;
+	PlayerState state = IDLE_DOWN;
 };
 
 #endif // _STATIC_ENTITY_H_

@@ -84,13 +84,16 @@ bool EntityManager::Save(pugi::xml_node &) const
 	return true;
 }
 
-Entity* EntityManager::CreateEntity(fPoint position)
+Entity* EntityManager::CreateEntity(fPoint position, std::string path)
 {
 	std::string id = std::to_string(id_count);
+	Entity* entity = nullptr;
+	if (path == "gold")
+	{
+		entity = new Player(position, path);
+	}
 
-	Player* entity = new Player(position);
 	entities.push_back(entity);
-
 	id_count++;
 
 	return entity;

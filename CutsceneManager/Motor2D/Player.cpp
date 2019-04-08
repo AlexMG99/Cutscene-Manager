@@ -8,7 +8,7 @@
 
 
 
-Player::Player(fPoint position) : Entity(position)
+Player::Player(fPoint position, std::string path) : Entity(position, path)
 {
 
 }

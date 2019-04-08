@@ -7,12 +7,11 @@
     </cutscene>
     <cutscene action="move_camera">
       <time start="7000" duration="500" speed_x="0" speed_y="-90"/>
-      <action type="0"/>
     </cutscene>
   </actions>
   <elements>
+    <element type="entity" name="gold" pos_x="200" pos_y="90"/>
     <element type="map" path="city.tmx">
- 
     </element>
   </elements>
 

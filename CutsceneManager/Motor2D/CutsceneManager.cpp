@@ -54,7 +54,9 @@ bool CutsceneManager::LoadCutscene()
 
 		if (type == "entity")
 		{
-			cutscene_element = new CutsceneEntity();
+			cutscene_element = new CutsceneEntity(cutscene_element_node.attribute("pos_x").as_int(), 
+				cutscene_element_node.attribute("pos_y").as_int(),
+				cutscene_element_node.attribute("name").as_string());
 		}
 		else if (type == "map")
 		{

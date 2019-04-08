@@ -7,8 +7,8 @@
 
 class CutsceneEntity :public CutsceneElement {
 public:
-	CutsceneEntity() {};
-	~CutsceneEntity() {};
+	CutsceneEntity(int pos_x, int pos_y, std::string name);
+	~CutsceneEntity();
 
 private:
 	Entity* entity = nullptr;

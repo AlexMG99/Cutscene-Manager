@@ -1,8 +1,20 @@
 <!-- Animations -->
 
 <entities>
-  <player>
+  <gold>
     <animations>
+      <i_down speed="5">
+        <frame x="7" y="5" w="17" h="26"/>
+      </i_down>
+      <i_right speed="5">
+        <frame x="6" y="69" w="19" h="26"/>
+      </i_right>
+      <i_up speed="5">
+        <frame x="7" y="101" w="17" h="26"/>
+      </i_up>
+      <i_left speed="5">
+        <frame x="7" y="37" w="19" h="26"/>
+      </i_left>
       <down speed="5">
         <frame x="7" y="5" w="17" h="26"/>
         <frame x="39" y="4" w="17" h="27"/>
@@ -27,18 +39,6 @@
         <frame x="71" y="37" w="19" h="26"/>
         <frame x="103" y="36" w="19" h="27"/>
       </left>
-      <i_down speed="5">
-        <frame x="7" y="5" w="17" h="26"/>
-      </i_down>
-      <i_right speed="5">
-        <frame x="6" y="69" w="19" h="26"/>
-      </i_right>
-      <i_up speed="5">
-        <frame x="7" y="101" w="17" h="26"/>
-      </i_up>
-      <i_left speed="5">
-        <frame x="7" y="37" w="19" h="26"/>
-      </i_left>
     </animations>
-  </player>
+  </gold>
 </entities>

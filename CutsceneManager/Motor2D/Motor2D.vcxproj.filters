@@ -68,6 +68,9 @@
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
     <ClCompile Include="CutsceneMap.cpp" />
+    <ClCompile Include="CutsceneMoveEntity.cpp">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -153,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="CutsceneMap.h">
       <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneMoveEntity.h">
+      <Filter>Engine\Cutscenes\Actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

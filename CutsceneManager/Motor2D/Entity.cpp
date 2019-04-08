@@ -3,18 +3,20 @@
 #include "j1App.h"
 #include "EntityManager.h"
 
-Entity::Entity(fPoint position)
+Entity::Entity(fPoint position, std::string path)
 {
 	this->position = position;
 
 	sprite = App->tex->Load("sprites/pkmn_trainer.png");
-	LoadAnimation("player");
+	LoadAnimation(path.c_str());
 
 }
 
 
 Entity::~Entity()
 {
+	App->tex->UnLoad(sprite);
+	sprite = nullptr;
 }
 
 bool Entity::Start()

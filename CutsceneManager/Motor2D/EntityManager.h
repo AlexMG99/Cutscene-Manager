@@ -22,7 +22,7 @@ public:
 	bool CleanUp();
 	bool Load(pugi::xml_node&);
 	bool Save(pugi::xml_node&) const;
-	Entity* CreateEntity(fPoint position);
+	Entity* CreateEntity(fPoint position, std::string path);
 	bool DeleteEntity(Entity* entity);
 
 	pugi::xml_document	animations_doc;

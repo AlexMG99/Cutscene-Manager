@@ -27,8 +27,6 @@ bool TestingScene::Start()
 
 	App->cutscene_manager->LoadCutscene();
 
-	App->entity_manager->CreateEntity({70,70});
-
 	return true;
 }
 

@@ -12,7 +12,7 @@ struct SDL_Texture;
 class Entity
 {
 public:
-	Entity(fPoint position);
+	Entity(fPoint position, std::string path);
 	~Entity();
 
 	void LoadAnimation(std::string entity_name);
