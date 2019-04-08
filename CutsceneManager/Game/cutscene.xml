@@ -2,14 +2,18 @@
 
 <cutscenes>
   <actions>
-    <cutscene name="move_camera">
-      <time start="0" duration="3000" speed_x="2" speed_y="0"/>
+    <cutscene action="move_camera">
+      <time start="0" duration="3000" speed_x="70" speed_y="0"/>
     </cutscene>
-    <cutscene name="move_camera">
-      <time start="7000" duration="500" speed_x="0" speed_y="-4"/>
+    <cutscene action="move_camera">
+      <time start="7000" duration="500" speed_x="0" speed_y="-90"/>
       <action type="0"/>
     </cutscene>
   </actions>
-  
+  <elements>
+    <element type="map" path="city.tmx">
+ 
+    </element>
+  </elements>
 
 </cutscenes>

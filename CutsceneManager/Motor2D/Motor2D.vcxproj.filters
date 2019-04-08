@@ -16,9 +16,6 @@
     <ClCompile Include="Input.cpp">
       <Filter>Engine\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="Pathfinding.cpp">
-      <Filter>Engine\Modules</Filter>
-    </ClCompile>
     <ClCompile Include="Render.cpp">
       <Filter>Engine\Modules</Filter>
     </ClCompile>
@@ -49,9 +46,6 @@
     <ClCompile Include="EntityManager.cpp">
       <Filter>Engine\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="TransitionManager.cpp">
-      <Filter>Engine\Modules</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Engine\Entities</Filter>
     </ClCompile>
@@ -70,6 +64,10 @@
     <ClCompile Include="CutsceneElement.cpp">
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
+    <ClCompile Include="CutsceneEntity.cpp">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -96,9 +94,6 @@
     <ClInclude Include="Input.h">
       <Filter>Engine\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="Pathfinding.h">
-      <Filter>Engine\Modules</Filter>
-    </ClInclude>
     <ClInclude Include="Render.h">
       <Filter>Engine\Modules</Filter>
     </ClInclude>
@@ -112,9 +107,6 @@
       <Filter>Engine\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Module.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="j1App.h">
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
@@ -135,9 +127,6 @@
     <ClInclude Include="Animation.h">
       <Filter>Engine\Others</Filter>
     </ClInclude>
-    <ClInclude Include="TransitionManager.h">
-      <Filter>Engine\Modules</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Engine\Entities</Filter>
     </ClInclude>
@@ -154,6 +143,15 @@
       <Filter>Engine\Cutscenes\Actions</Filter>
     </ClInclude>
     <ClInclude Include="CutsceneElement.h">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="j1App.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneEntity.h">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneMap.h">
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClInclude>
   </ItemGroup>

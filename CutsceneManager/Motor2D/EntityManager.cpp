@@ -19,6 +19,7 @@ EntityManager::~EntityManager()
 
 bool EntityManager::Awake(pugi::xml_node &)
 {
+	animations_doc.load_file("anim.xml");
 	return true;
 }
 

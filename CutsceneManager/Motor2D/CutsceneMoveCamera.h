@@ -10,17 +10,11 @@ public:
 	CutsceneMoveCamera(uint start, uint duration, int speed_x, int speed_y);
 	~CutsceneMoveCamera() {};
 
-	void Execute();
+	void Execute(float dt);
 
 private:
 	iPoint camera_speed;
 
-
-
-
 };
-
-
-
 
 #endif

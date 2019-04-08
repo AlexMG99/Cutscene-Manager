@@ -4,9 +4,15 @@
 #include "Entity.h"
 
 enum PlayerState {
-	STATIC_IDLE,
-	STATIC_WALKING,
-	STATIC_ATTACK
+	WALKING_DOWN = 0,
+	WALKING_RIGHT,
+	WALKING_UP,
+	WALKING_LEFT,
+	IDLE_DOWN,
+	IDLE_RIGHT,
+	IDLE_UP,
+	IDLE_LEFT
+	
 };
 
 
@@ -22,7 +28,7 @@ public:
 	virtual bool CleanUp();
 
 protected:
-	PlayerState state = STATIC_IDLE;
+	PlayerState state = WALKING_DOWN;
 };
 
 #endif // _STATIC_ENTITY_H_

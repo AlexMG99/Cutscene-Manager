@@ -1,6 +1,8 @@
 #include "CutsceneManager.h"
 #include "p2Log.h"
 #include "CutsceneMoveCamera.h"
+#include "CutsceneEntity.h"
+#include "CutsceneMap.h"
 
 CutsceneManager::CutsceneManager()
 {
@@ -22,38 +24,56 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 	return ret;
 }
 
+
 bool CutsceneManager::LoadCutscene()
-{	
+{
 	//TODO 1: Iterate the differents cutscene. Save the cutscene in the cutscenes vector.
 
-	CutsceneAction* cutscene = nullptr;
+	CutsceneAction* cutscene_action = nullptr;
 
-	for(pugi::xml_node cutscene_node = cutscene_file.first_child().child("actions").child("cutscene"); cutscene_node; cutscene_node = cutscene_node.next_sibling())
+	for (pugi::xml_node cutscene_action_node = cutscene_file.first_child().child("actions").child("cutscene"); cutscene_action_node; cutscene_action_node = cutscene_action_node.next_sibling())
 	{
-		std::string name = cutscene_node.attribute("name").as_string();
+		std::string action = cutscene_action_node.attribute("action").as_string();
 
-		uint start = cutscene_node.child("time").attribute("start").as_uint();
-		uint duration = cutscene_node.child("time").attribute("duration").as_uint();
+		uint start = cutscene_action_node.child("time").attribute("start").as_uint();
+		uint duration = cutscene_action_node.child("time").attribute("duration").as_uint();
 
-		if (name == "move_camera")
+		if (action == "move_camera")
 		{
-			cutscene = new CutsceneMoveCamera(start, duration, cutscene_node.child("time").attribute("speed_x").as_int(), cutscene_node.child("time").attribute("speed_y").as_int());
+			cutscene_action = new CutsceneMoveCamera(start, duration, cutscene_action_node.child("time").attribute("speed_x").as_int(), cutscene_action_node.child("time").attribute("speed_y").as_int());
 		}
 
-		cutscenes.push_back(cutscene);
+		actions.push_back(cutscene_action);
+	}
+
+	CutsceneElement* cutscene_element = nullptr;
+
+	for (pugi::xml_node cutscene_element_node = cutscene_file.first_child().child("elements").child("element"); cutscene_element_node; cutscene_element_node = cutscene_element_node.next_sibling())
+	{
+		std::string type = cutscene_element_node.attribute("type").as_string();
+
+		if (type == "entity")
+		{
+			cutscene_element = new CutsceneEntity();
+		}
+		else if (type == "map")
+		{
+			cutscene_element = new CutsceneMap(cutscene_element_node.attribute("path").as_string());
+		}
+
 	}
 
 	return true;
 }
 
-void CutsceneManager::ExecuteCutscene()
+void CutsceneManager::ExecuteCutscene(float dt)
 {
 	if (is_executing)
 	{
 		if (start) {
 			cutscene_timer.Start();
 
-			item = cutscenes.begin();
+			item = actions.begin();
 			start = false;
 		}
 
@@ -63,10 +83,10 @@ void CutsceneManager::ExecuteCutscene()
 			++item;
 		}
 
-		if (item != cutscenes.end())
+		if (item != actions.end())
 		{
 			if(cutscene_timer.ReadMs() > (*item)->start_time)
-				(*item)->Execute();
+				(*item)->Execute(dt);
 		}
 		else
 		{

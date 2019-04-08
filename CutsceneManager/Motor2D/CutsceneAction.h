@@ -14,7 +14,7 @@ public:
 
 	virtual ~CutsceneAction() {};
 
-	virtual void Execute() {};
+	virtual void Execute(float dt) {};
 
 public:
 	uint start_time;

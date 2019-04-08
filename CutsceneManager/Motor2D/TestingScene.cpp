@@ -7,9 +7,9 @@
 #include "Render.h"
 #include "Window.h"
 #include "Map.h"
-#include "PathFinding.h"
 #include "TestingScene.h"
 #include "CutsceneManager.h"
+#include "EntityManager.h"
 
 
 TestingScene::TestingScene() : Scene()
@@ -24,9 +24,10 @@ TestingScene::~TestingScene()
 // Called before the first frame
 bool TestingScene::Start()
 {
-	App->map->Load("city.tmx");
 
 	App->cutscene_manager->LoadCutscene();
+
+	App->entity_manager->CreateEntity({70,70});
 
 	return true;
 }
@@ -63,7 +64,7 @@ bool TestingScene::PreUpdate()
 bool TestingScene::Update(float dt)
 {
 
-	App->cutscene_manager->ExecuteCutscene();
+	App->cutscene_manager->ExecuteCutscene(dt);
 
 	App->map->Draw();
 

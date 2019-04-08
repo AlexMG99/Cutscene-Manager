@@ -19,6 +19,7 @@ class SceneManager;
 class Map;
 class Pathfinding;
 class CutsceneManager;
+class EntityManager;
 
 class j1App
 {
@@ -91,6 +92,7 @@ public:
 	Map*				map;
 	Pathfinding*		pathfinding;
 	CutsceneManager*	cutscene_manager;
+	EntityManager*		entity_manager;
 
 private:
 

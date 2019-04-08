@@ -25,8 +25,10 @@ public:
 	Entity* CreateEntity(fPoint position);
 	bool DeleteEntity(Entity* entity);
 
+	pugi::xml_document	animations_doc;
 private:
 	pugi::xml_node entity_configs;
+
 	int id_count = 0;
 	bool draw_path = false;
 };

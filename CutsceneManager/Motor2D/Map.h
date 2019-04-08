@@ -4,6 +4,7 @@
 #include "PugiXml/src/pugixml.hpp"
 #include "p2Point.h"
 #include "Module.h"
+#include "SDL/include/SDL.h"
 
 struct Properties
 {
@@ -18,7 +19,7 @@ struct Properties
 		std::list<Property*>::iterator item;
 		item = list.begin();
 
-		while(item != list.end())
+		while (item != list.end())
 		{
 			RELEASE(*item);
 			++item;

@@ -5,6 +5,7 @@
 #include "Entity.h"
 #include "PerfTimer.h"
 #include "CutsceneAction.h"
+#include "CutsceneElement.h"
 
 
 class CutsceneManager: public Module {
@@ -19,8 +20,10 @@ public:
 	bool Update(float dt) { return true; };
 	bool CleanUp() { return true; };
 
+	//Cutscene Functions
+
 	bool LoadCutscene();
-	void ExecuteCutscene();
+	void ExecuteCutscene(float dt);
 
 	double GetTimer();
 	void SetExecuting(bool executing);
@@ -31,8 +34,11 @@ private:
 	bool start = true;
 
 	pugi::xml_document cutscene_file;
-	std::vector<CutsceneAction*> cutscenes;
+	std::vector<CutsceneAction*> actions;
+	std::vector<CutsceneElement*> elements;
+
 	std::vector<CutsceneAction*>::iterator item;
+
 };
 
 

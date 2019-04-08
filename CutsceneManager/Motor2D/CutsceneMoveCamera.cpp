@@ -10,13 +10,13 @@ CutsceneMoveCamera::CutsceneMoveCamera(uint start, uint duration, int speed_x, i
 
 }
 
-void CutsceneMoveCamera::Execute()
+void CutsceneMoveCamera::Execute(float dt)
 {
 	double start = App->cutscene_manager->GetTimer() - start_time;
 
 	if (start < duration_time)
 	{
-		App->render->camera.x -= camera_speed.x;
-		App->render->camera.y -= camera_speed.y;
+		App->render->camera.x -= camera_speed.x * dt;
+		App->render->camera.y -= camera_speed.y * dt;
 	}
 }
