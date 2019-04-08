@@ -10,7 +10,7 @@ public:
 	~CutsceneElement() {};
 
 public:
-	bool active;
+	bool active = false;
 	std::string path;
 	std::string name;
 };

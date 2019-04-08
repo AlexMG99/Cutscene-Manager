@@ -13,12 +13,15 @@ public:
 	_TTF_Font* font;
 	std::string text;
 	SDL_Color color;
-	UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color = {255,255,255,255}, int max_width = 10);
+	UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color, int max_width, bool image);
 	~UILabel();
 	bool UIBlit();
 	void SetText(std::string text);
 	void SetColor(SDL_Color color);
 	bool CleanUp();
+
+public:
+	bool image = true;
 };
 
 #endif // !UI_LABEL_H

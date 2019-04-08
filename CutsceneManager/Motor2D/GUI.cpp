@@ -173,10 +173,10 @@ UIImage* Gui::CreateImage(iPoint pos, SDL_Rect rect, UIElement* parent, bool ima
 	return image;
 }
 
-UILabel* Gui::CreateLabel(iPoint pos, std::string path, int size, std::string text, SDL_Color color, int max_width, UIElement* parent)
+UILabel* Gui::CreateLabel(iPoint pos, std::string path, int size, std::string text, SDL_Color color, int max_width, bool image, UIElement* parent)
 {
 	_TTF_Font* font = App->fonts->Load(path.c_str(), size);
-	UILabel* label = new UILabel(pos, font, text, color, max_width);
+	UILabel* label = new UILabel(pos, font, text, color, max_width, image);
 	label->parent = parent;
 	elements.push_back(label);
 

@@ -4,6 +4,7 @@
 #include "CutsceneMoveEntity.h"
 #include "CutsceneEntity.h"
 #include "CutsceneMap.h"
+#include "CutsceneText.h"
 
 CutsceneManager::CutsceneManager()
 {
@@ -54,6 +55,7 @@ bool CutsceneManager::LoadCutscene()
 	}
 
 	CutsceneElement* cutscene_element = nullptr;
+	
 
 	for (pugi::xml_node cutscene_element_node = cutscene_file.first_child().child("elements").child("element"); cutscene_element_node; cutscene_element_node = cutscene_element_node.next_sibling())
 	{
@@ -70,7 +72,16 @@ bool CutsceneManager::LoadCutscene()
 		{
 			cutscene_element = new CutsceneMap(cutscene_element_node.attribute("path").as_string());
 		}
+		else if (type == "text")
+		{
+			cutscene_element = new CutsceneText(cutscene_element_node.attribute("pos_x").as_int(),
+				cutscene_element_node.attribute("pos_y").as_int(), 
+				cutscene_element_node.attribute("txt").as_string(),
+				cutscene_element_node.attribute("active").as_bool(true)
+				);
+		}
 
+		cutscene_element->active = cutscene_element_node.attribute("active").as_bool(true);
 		elements.insert(std::pair <std::string, CutsceneElement*>(name, cutscene_element));
 	}
 

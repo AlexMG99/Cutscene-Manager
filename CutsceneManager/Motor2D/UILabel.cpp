@@ -3,7 +3,7 @@
 #include "Fonts.h"
 #include "UILabel.h"
 
-UILabel::UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color, int max_width)
+UILabel::UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color, int max_width, bool image)
 {
 	int w, h;
 	App->fonts->CalcSize("a", w, h, font); //calc size of one char
@@ -61,6 +61,7 @@ UILabel::UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color,
 	this->font = font;
 	this->text = text;
 	this->color = color;
+	this->image = image;
 }
 UILabel::~UILabel()
 {
@@ -70,10 +71,13 @@ bool UILabel::UIBlit()
 {
 	iPoint screen_pos = GetScreenPos();
 	SDL_Texture* texture = App->fonts->Print(text.c_str(), color, font);
-	if (clipping && parent)
-		App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
-	else
-		App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
+	if (image) 
+	{
+		if (clipping && parent)
+			App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
+		else
+			App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
+	}
 
 
 	SDL_DestroyTexture(texture);

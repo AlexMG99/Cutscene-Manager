@@ -22,6 +22,7 @@
     <element type="entity" name="gold" pos_x="10" pos_y="340"/>
     <element type="entity" name="silver" pos_x="670" pos_y="338"/>
     <element type="map" name="city" path="city.tmx"/>
+    <element type="text" pos_x="100" pos_y="100" txt="Hola, que tal? XD Lol viva lña dfmjoenjic ejuc c eihjc ner ic ei cie i coj" active="true"/>
   </elements>
 
 </cutscenes>

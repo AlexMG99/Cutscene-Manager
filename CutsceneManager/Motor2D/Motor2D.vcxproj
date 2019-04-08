@@ -81,6 +81,7 @@
     <ClCompile Include="CutsceneEntity.cpp" />
     <ClCompile Include="CutsceneManager.cpp" />
     <ClCompile Include="CutsceneMap.cpp" />
+    <ClCompile Include="CutsceneModify.cpp" />
     <ClCompile Include="CutsceneMoveCamera.cpp" />
     <ClCompile Include="CutsceneMoveEntity.cpp" />
     <ClCompile Include="CutsceneText.cpp" />
@@ -113,6 +114,7 @@
     <ClInclude Include="CutsceneEntity.h" />
     <ClInclude Include="CutsceneManager.h" />
     <ClInclude Include="CutsceneMap.h" />
+    <ClInclude Include="CutsceneModify.h" />
     <ClInclude Include="CutsceneMoveCamera.h" />
     <ClInclude Include="CutsceneMoveEntity.h" />
     <ClInclude Include="CutsceneText.h" />
