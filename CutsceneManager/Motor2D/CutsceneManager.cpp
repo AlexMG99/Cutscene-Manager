@@ -18,9 +18,9 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 	pugi::xml_parse_result result = cutscene_file.load_file(config.first_child().child_value());
 
 	if (result == NULL)
-		LOG("Could not load map xml file cutscene.xml. Pugi error: %s", result.description());
+LOG("Could not load map xml file cutscene.xml. Pugi error: %s", result.description());
 	else
-		ret = true;
+	ret = true;
 
 	return ret;
 }
@@ -45,7 +45,7 @@ bool CutsceneManager::LoadCutscene()
 		}
 		else if (action == "move_entity")
 		{
-			cutscene_action = new CutsceneMoveEntity(start, duration, 
+			cutscene_action = new CutsceneMoveEntity(start, duration,
 				cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float(),
 				cutscene_action_node.attribute("entity").as_string());
 		}
@@ -62,7 +62,7 @@ bool CutsceneManager::LoadCutscene()
 
 		if (type == "entity")
 		{
-			cutscene_element = new CutsceneEntity(cutscene_element_node.attribute("pos_x").as_int(), 
+			cutscene_element = new CutsceneEntity(cutscene_element_node.attribute("pos_x").as_int(),
 				cutscene_element_node.attribute("pos_y").as_int(),
 				cutscene_element_node.attribute("name").as_string());
 		}
@@ -96,15 +96,35 @@ void CutsceneManager::ExecuteCutscene(float dt)
 
 		if (item != actions.end())
 		{
-			if(cutscene_timer.ReadMs() > (*item)->start_time)
+			if (cutscene_timer.ReadMs() > (*item)->start_time)
 				(*item)->Execute(dt);
 		}
 		else
 		{
 			is_executing = false;
 			start = true;
+			ClearCutscene();
 		}
 	}
+}
+
+void CutsceneManager::ClearCutscene()
+{
+	for (std::vector<CutsceneAction*>::iterator it = actions.begin(); it != actions.end(); ++it)
+	{
+		(*it)->~CutsceneAction();
+		delete (*it);
+	}
+
+	actions.clear();
+
+	for (std::map<std::string, CutsceneElement*>::iterator it = elements.begin(); it != elements.end(); ++it)
+	{
+		(*it).second->~CutsceneElement();
+		delete (*it).second;
+	}
+
+	elements.clear();
 }
 
 double CutsceneManager::GetTimer()

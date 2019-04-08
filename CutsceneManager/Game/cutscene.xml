@@ -3,24 +3,24 @@
 <cutscenes>
   <actions>
     <cutscene action="move_entity" entity="gold">
-      <time start="0" duration="2000" speed_x="88" speed_y="0"/>
-    </cutscene>
-    <cutscene action="move_entity" entity="silver">
-      <time start="2000" duration="2000" speed_x="120" speed_y="0"/>
+      <time start="0" duration="4000" speed_x="88" speed_y="0"/>
     </cutscene>
     <cutscene action="move_camera">
       <time start="4000" duration="3300" speed_x="90" speed_y="0"/>
     </cutscene>
-    <cutscene action="move_entity" entity="gold">
+    <cutscene action="move_entity" entity="silver">
+      <time start="7300" duration="2500" speed_x="-120" speed_y="0"/>
+    </cutscene>
+    <!--cutscene action="move_entity" entity="gold">
       <time start="7300" duration="1700" speed_x="0" speed_y="-90"/>
     </cutscene>
     <cutscene action="move_entity" entity="gold">
       <time start="10100" duration="5000" speed_x="30" speed_y="0"/>
-    </cutscene>
+    </cutscene-->
   </actions>
   <elements>
-    <element type="entity" name="gold" pos_x="10" pos_y="330"/>
-    <element type="entity" name="silver" pos_x="10" pos_y="360"/>
+    <element type="entity" name="gold" pos_x="10" pos_y="340"/>
+    <element type="entity" name="silver" pos_x="670" pos_y="338"/>
     <element type="map" name="city" path="city.tmx"/>
   </elements>
 

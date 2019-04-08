@@ -20,6 +20,8 @@ class Map;
 class Pathfinding;
 class CutsceneManager;
 class EntityManager;
+class Fonts;
+class Gui;
 
 class j1App
 {
@@ -93,6 +95,8 @@ public:
 	Pathfinding*		pathfinding;
 	CutsceneManager*	cutscene_manager;
 	EntityManager*		entity_manager;
+	Fonts*				fonts;
+	Gui*				gui;
 
 private:
 

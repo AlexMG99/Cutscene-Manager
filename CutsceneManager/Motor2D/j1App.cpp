@@ -13,6 +13,8 @@
 #include "Map.h"
 #include "CutsceneManager.h"
 #include "EntityManager.h"
+#include "Fonts.h"
+#include "GUI.h"
 #include "j1App.h"
 
 // Constructor
@@ -30,6 +32,8 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	map = new Map();
 	cutscene_manager = new CutsceneManager();
 	entity_manager = new EntityManager();
+	fonts = new Fonts();
+	gui = new Gui();
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -39,8 +43,10 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(audio);
 	AddModule(map);
 	AddModule(scene_manager);
+	AddModule(fonts);
 	AddModule(entity_manager);
 	AddModule(cutscene_manager);
+	AddModule(gui);
 
 	// render last to swap buffer
 	AddModule(render);

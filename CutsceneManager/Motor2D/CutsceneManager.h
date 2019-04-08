@@ -25,6 +25,7 @@ public:
 
 	bool LoadCutscene();
 	void ExecuteCutscene(float dt);
+	void ClearCutscene();
 
 	double GetTimer();
 	void SetExecuting(bool executing);
