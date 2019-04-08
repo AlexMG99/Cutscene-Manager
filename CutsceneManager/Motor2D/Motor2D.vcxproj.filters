@@ -58,8 +58,17 @@
     <ClCompile Include="CutsceneManager.cpp">
       <Filter>Engine\Modules</Filter>
     </ClCompile>
-    <ClCompile Include="StaticEntity.cpp">
+    <ClCompile Include="Player.cpp">
       <Filter>Engine\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneAction.cpp">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneMoveCamera.cpp">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneElement.cpp">
+      <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -135,8 +144,17 @@
     <ClInclude Include="CutsceneManager.h">
       <Filter>Engine\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="StaticEntity.h">
+    <ClInclude Include="Player.h">
       <Filter>Engine\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneAction.h">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneMoveCamera.h">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneElement.h">
+      <Filter>Engine\Cutscenes\Elements</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +178,15 @@
     </Filter>
     <Filter Include="Engine\Others">
       <UniqueIdentifier>{a8bfab6a-5472-4969-943e-861a8b493f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Cutscenes">
+      <UniqueIdentifier>{95141e66-b262-4745-8887-2c08f57ee0de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Cutscenes\Actions">
+      <UniqueIdentifier>{7f70ed25-f9fb-49a8-938a-7fb6ceba8bb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Cutscenes\Elements">
+      <UniqueIdentifier>{d37728bc-9c22-46e5-b0b0-b5abe42436c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

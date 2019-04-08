@@ -4,22 +4,22 @@
 #include "Render.h"
 #include "Textures.h"
 
-#include "StaticEntity.h"
+#include "Player.h"
 
 
 
-StaticEntity::StaticEntity(fPoint position) : Entity(position)
+Player::Player(fPoint position) : Entity(position)
 {
 
 }
 
 
-StaticEntity::~StaticEntity()
+Player::~Player()
 {
 	LOG("destructor called");
 }
 
-bool StaticEntity::Update(float dt)
+bool Player::Update(float dt)
 {
 
 	current_frame = animations[state].GetCurrentFrame(dt);
@@ -27,7 +27,7 @@ bool StaticEntity::Update(float dt)
 	return true;
 }
 
-bool StaticEntity::CleanUp()
+bool Player::CleanUp()
 {
 	if(sprite)
 		App->tex->UnLoad(sprite);
@@ -35,7 +35,7 @@ bool StaticEntity::CleanUp()
 	return true;
 }
 
-bool StaticEntity::PostUpdate()
+bool Player::PostUpdate()
 {
 	fPoint render_position = { position.x - current_frame.w / 2, position.y - current_frame.h };
 	App->render->Blit(sprite, render_position.x, render_position.y, &current_frame);

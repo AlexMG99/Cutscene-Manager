@@ -1,5 +1,6 @@
 #include "CutsceneManager.h"
 #include "p2Log.h"
+#include "CutsceneMoveCamera.h"
 
 CutsceneManager::CutsceneManager()
 {
@@ -21,17 +22,17 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 	return ret;
 }
 
-bool CutsceneManager::LoadCutscene(CutsceneCode code)
+bool CutsceneManager::LoadCutscene()
 {	
 	//TODO 1: Iterate the differents cutscene. Save the cutscene in the cutscenes vector.
 
-	Cutscene* cutscene = nullptr;
+	CutsceneAction* cutscene = nullptr;
 
 	for(pugi::xml_node cutscene_node = cutscene_file.first_child().child("cutscene"); cutscene_node; cutscene_node = cutscene_node.next_sibling())
 	{
 		uint start = cutscene_node.child("time").attribute("start").as_uint();
-		uint end = cutscene_node.child("time").attribute("end").as_uint();
-		cutscene = new Cutscene(start, end, code);
+		uint duration = cutscene_node.child("time").attribute("duration").as_uint();
+		cutscene = new CutsceneMoveCamera(start, duration, 2, 0);
 
 		cutscenes.push_back(cutscene);
 	}
@@ -39,9 +40,16 @@ bool CutsceneManager::LoadCutscene(CutsceneCode code)
 	return true;
 }
 
-bool BuildingConstruction::Execute()
+void CutsceneManager::ExecuteCutscene()
 {
+	cutscene_timer.Start();
+	std::vector<CutsceneAction*>::iterator item = cutscenes.begin();
 
+	(*item)->Execute();
 
-	return true;
+}
+
+double CutsceneManager::GetTimer()
+{
+	return cutscene_timer.ReadMs();
 }

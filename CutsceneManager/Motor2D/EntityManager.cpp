@@ -4,7 +4,7 @@
 #include "Input.h"
 #include "EntityManager.h"
 #include "Entity.h"
-#include "StaticEntity.h"
+#include "Player.h"
 
 
 
@@ -87,7 +87,7 @@ Entity* EntityManager::CreateEntity(fPoint position)
 {
 	std::string id = std::to_string(id_count);
 
-	StaticEntity* entity = new StaticEntity(position);
+	Player* entity = new Player(position);
 	entities.push_back(entity);
 
 	id_count++;

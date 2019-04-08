@@ -1,19 +1,20 @@
-#ifndef _STATIC_ENTITY_H_
-#define _STATIC_ENTITY_H_
+#ifndef _PLAYER_H_
+#define _PLAYER_H_
 
 #include "Entity.h"
 
-enum Static_State {
+enum PlayerState {
 	STATIC_IDLE,
-	STATIC_CONSTRUCT
+	STATIC_WALKING,
+	STATIC_ATTACK
 };
 
 
-class StaticEntity : public Entity
+class Player : public Entity
 {
 public:
-	StaticEntity(fPoint position);
-	~StaticEntity();
+	Player(fPoint position);
+	~Player();
 
 	virtual bool PreUpdate() { return true; };
 	virtual bool Update(float dt);
@@ -21,7 +22,7 @@ public:
 	virtual bool CleanUp();
 
 protected:
-	Static_State state = STATIC_IDLE;
+	PlayerState state = STATIC_IDLE;
 };
 
 #endif // _STATIC_ENTITY_H_

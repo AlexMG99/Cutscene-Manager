@@ -24,9 +24,10 @@ TestingScene::~TestingScene()
 // Called before the first frame
 bool TestingScene::Start()
 {
-	App->map->Load("iso_walk.tmx");
+	App->map->Load("city.tmx");
 
-	App->cutscene_manager->LoadCutscene(CutsceneCode::CUTSCENE_1);
+	App->cutscene_manager->LoadCutscene();
+
 	return true;
 }
 
@@ -57,6 +58,9 @@ bool TestingScene::Update(float dt)
 
 	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
 		App->render->camera.x -= 10;
+
+	if (App->input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
+		App->cutscene_manager->ExecuteCutscene();
 
 	App->map->Draw();
 
