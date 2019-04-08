@@ -1,9 +1,15 @@
 <!-- Cutscene files -->
 
 <cutscenes>
-  <cutscene>
-    <time start="0" duration="3000"/>
-    <action type="0"/>
-  </cutscene>
+  <actions>
+    <cutscene name="move_camera">
+      <time start="0" duration="3000" speed_x="2" speed_y="0"/>
+    </cutscene>
+    <cutscene name="move_camera">
+      <time start="7000" duration="500" speed_x="0" speed_y="-4"/>
+      <action type="0"/>
+    </cutscene>
+  </actions>
+  
 
 </cutscenes>

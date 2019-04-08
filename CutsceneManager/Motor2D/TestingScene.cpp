@@ -35,12 +35,6 @@ bool TestingScene::Start()
 bool TestingScene::PreUpdate()
 {
 
-	return true;
-}
-
-// Called each loop iteration
-bool TestingScene::Update(float dt)
-{
 	if (App->input->GetKey(SDL_SCANCODE_L) == KEY_DOWN)
 		App->LoadGame("save_game.xml");
 
@@ -60,7 +54,16 @@ bool TestingScene::Update(float dt)
 		App->render->camera.x -= 10;
 
 	if (App->input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
-		App->cutscene_manager->ExecuteCutscene();
+		App->cutscene_manager->SetExecuting(true);
+
+	return true;
+}
+
+// Called each loop iteration
+bool TestingScene::Update(float dt)
+{
+
+	App->cutscene_manager->ExecuteCutscene();
 
 	App->map->Draw();
 

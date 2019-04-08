@@ -23,13 +23,18 @@ public:
 	void ExecuteCutscene();
 
 	double GetTimer();
+	void SetExecuting(bool executing);
 
 private:
 	PerfTimer cutscene_timer;
+	bool is_executing = false;
+	bool start = true;
 
 	pugi::xml_document cutscene_file;
 	std::vector<CutsceneAction*> cutscenes;
+	std::vector<CutsceneAction*>::iterator item;
 };
+
 
 
 

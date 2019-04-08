@@ -16,14 +16,10 @@ public:
 
 	virtual void Execute() {};
 
-	void SetActive(bool active);
-	bool IsActive() const;
-
-protected:
+public:
 	uint start_time;
 	uint duration_time;
 
-	bool active = false;
 };
 
 #endif // !

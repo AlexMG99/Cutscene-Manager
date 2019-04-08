@@ -8,7 +8,6 @@ CutsceneMoveCamera::CutsceneMoveCamera(uint start, uint duration, int speed_x, i
 	camera_speed.x = speed_x;
 	camera_speed.y = speed_y;
 
-	active = true;
 }
 
 void CutsceneMoveCamera::Execute()
