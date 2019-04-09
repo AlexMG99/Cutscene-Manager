@@ -94,6 +94,12 @@
     <ClCompile Include="CutsceneModifyText.cpp">
       <Filter>Engine\Cutscenes\Actions</Filter>
     </ClCompile>
+    <ClCompile Include="CutsceneImage.cpp">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="CutsceneModifyImage.cpp">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p2Defs.h">
@@ -202,6 +208,12 @@
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClInclude>
     <ClInclude Include="CutsceneModifyText.h">
+      <Filter>Engine\Cutscenes\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneImage.h">
+      <Filter>Engine\Cutscenes\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="CutsceneModifyImage.h">
       <Filter>Engine\Cutscenes\Actions</Filter>
     </ClInclude>
   </ItemGroup>

@@ -164,7 +164,7 @@ bool Gui::CleanUp()
 	return true;
 }
 
-UIImage* Gui::CreateImage(iPoint pos, SDL_Rect rect, UIElement* parent, bool image_)
+UIImage* Gui::CreateImage(iPoint pos, SDL_Rect rect, bool image_, UIElement* parent)
 {
 	UIImage* image = new UIImage(pos, rect, image_);
 	image->parent = parent;

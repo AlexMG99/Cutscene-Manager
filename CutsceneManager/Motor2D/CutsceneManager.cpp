@@ -3,9 +3,11 @@
 #include "CutsceneMoveCamera.h"
 #include "CutsceneMoveEntity.h"
 #include "CutsceneModifyText.h"
+#include "CutsceneModifyImage.h"
 #include "CutsceneEntity.h"
 #include "CutsceneMap.h"
 #include "CutsceneText.h"
+#include "CutsceneImage.h"
 
 CutsceneManager::CutsceneManager()
 {
@@ -20,7 +22,7 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 	pugi::xml_parse_result result = cutscene_file.load_file(config.first_child().child_value());
 
 	if (result == NULL)
-LOG("Could not load map xml file cutscene.xml. Pugi error: %s", result.description());
+		LOG("Could not load map xml file cutscene.xml. Pugi error: %s", result.description());
 	else
 	ret = true;
 
@@ -58,6 +60,12 @@ bool CutsceneManager::LoadCutscene()
 				cutscene_action_node.child("time").attribute("type").as_string(),
 				cutscene_action_node.child("time").attribute("text").as_string());
 		}
+		else if (action == "modify_image")
+		{
+			cutscene_action = new CutsceneModifyImage(start, duration,
+				cutscene_action_node.attribute("name").as_string(),
+				cutscene_action_node.child("time").attribute("type").as_string());
+		}
 
 		actions.push_back(cutscene_action);
 	}
@@ -87,6 +95,18 @@ bool CutsceneManager::LoadCutscene()
 				cutscene_element_node.attribute("txt").as_string(),
 				cutscene_element_node.attribute("active").as_bool(true)
 				);
+		}
+		else if (type == "image")
+		{
+			cutscene_element = new CutsceneImage(cutscene_element_node.attribute("pos_x").as_int(),
+				cutscene_element_node.attribute("pos_y").as_int(),
+				{
+					cutscene_element_node.attribute("rect_x").as_int(),
+					cutscene_element_node.attribute("rect_y").as_int(),
+					cutscene_element_node.attribute("rect_w").as_int(),
+					cutscene_element_node.attribute("rect_h").as_int()
+				},
+				cutscene_element_node.attribute("active").as_bool(true));
 		}
 
 		cutscene_element->active = cutscene_element_node.attribute("active").as_bool(true);

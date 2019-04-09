@@ -79,8 +79,10 @@
     <ClCompile Include="CutsceneAction.cpp" />
     <ClCompile Include="CutsceneElement.cpp" />
     <ClCompile Include="CutsceneEntity.cpp" />
+    <ClCompile Include="CutsceneImage.cpp" />
     <ClCompile Include="CutsceneManager.cpp" />
     <ClCompile Include="CutsceneMap.cpp" />
+    <ClCompile Include="CutsceneModifyImage.cpp" />
     <ClCompile Include="CutsceneModifyText.cpp" />
     <ClCompile Include="CutsceneMoveCamera.cpp" />
     <ClCompile Include="CutsceneMoveEntity.cpp" />
@@ -112,8 +114,10 @@
     <ClInclude Include="CutsceneAction.h" />
     <ClInclude Include="CutsceneElement.h" />
     <ClInclude Include="CutsceneEntity.h" />
+    <ClInclude Include="CutsceneImage.h" />
     <ClInclude Include="CutsceneManager.h" />
     <ClInclude Include="CutsceneMap.h" />
+    <ClInclude Include="CutsceneModifyImage.h" />
     <ClInclude Include="CutsceneModifyText.h" />
     <ClInclude Include="CutsceneMoveCamera.h" />
     <ClInclude Include="CutsceneMoveEntity.h" />
