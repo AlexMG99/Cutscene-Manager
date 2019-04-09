@@ -10,6 +10,8 @@ public:
 	CutsceneText(int pos_x, int pos_y, std::string text, bool image);
 	~CutsceneText();
 
+	void ChangeState(bool active);
+
 public:
 	UILabel* text = nullptr;
 

@@ -7,7 +7,7 @@ class CutsceneElement
 {
 public:
 	CutsceneElement() {};
-	~CutsceneElement() {};
+	virtual ~CutsceneElement() {};
 
 public:
 	bool active = false;

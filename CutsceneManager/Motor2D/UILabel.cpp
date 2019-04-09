@@ -2,6 +2,7 @@
 #include "Render.h"
 #include "Fonts.h"
 #include "UILabel.h"
+#include "p2Log.h"
 
 UILabel::UILabel(iPoint pos, _TTF_Font* font, std::string text, SDL_Color color, int max_width, bool image)
 {
@@ -77,6 +78,7 @@ bool UILabel::UIBlit()
 			App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
 		else
 			App->render->Blit(texture, screen_pos.x, screen_pos.y, nullptr, 0.0F, 0.0, INT_MAX, INT_MAX);
+		LOG("Blitea");
 	}
 
 

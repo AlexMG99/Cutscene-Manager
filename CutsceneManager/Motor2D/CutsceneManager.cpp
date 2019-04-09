@@ -2,6 +2,7 @@
 #include "p2Log.h"
 #include "CutsceneMoveCamera.h"
 #include "CutsceneMoveEntity.h"
+#include "CutsceneModifyText.h"
 #include "CutsceneEntity.h"
 #include "CutsceneMap.h"
 #include "CutsceneText.h"
@@ -49,6 +50,13 @@ bool CutsceneManager::LoadCutscene()
 			cutscene_action = new CutsceneMoveEntity(start, duration,
 				cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float(),
 				cutscene_action_node.attribute("entity").as_string());
+		}
+		else if (action == "modify_text")
+		{
+			cutscene_action = new CutsceneModifyText(start, duration,
+				cutscene_action_node.attribute("name").as_string(),
+				cutscene_action_node.child("time").attribute("type").as_string(),
+				cutscene_action_node.child("time").attribute("text").as_string());
 		}
 
 		actions.push_back(cutscene_action);

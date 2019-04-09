@@ -91,7 +91,7 @@
     <ClCompile Include="CutsceneText.cpp">
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="CutsceneModify.cpp">
+    <ClCompile Include="CutsceneModifyText.cpp">
       <Filter>Engine\Cutscenes\Actions</Filter>
     </ClCompile>
   </ItemGroup>
@@ -201,7 +201,7 @@
     <ClInclude Include="CutsceneText.h">
       <Filter>Engine\Cutscenes\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="CutsceneModify.h">
+    <ClInclude Include="CutsceneModifyText.h">
       <Filter>Engine\Cutscenes\Actions</Filter>
     </ClInclude>
   </ItemGroup>

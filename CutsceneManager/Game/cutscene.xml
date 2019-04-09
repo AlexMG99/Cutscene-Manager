@@ -2,8 +2,17 @@
 
 <cutscenes>
   <actions>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="1000" duration="900" type="change" text="Hola de nuevo amigos!"/>
+    </cutscene>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="1900" duration="100" type="deactivate"/>
+    </cutscene>
     <cutscene action="move_entity" entity="gold">
-      <time start="0" duration="4000" speed_x="88" speed_y="0"/>
+      <time start="2000" duration="1000" speed_x="88" speed_y="0"/>
+    </cutscene>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="3000" duration="100" type="activate"/>
     </cutscene>
     <cutscene action="move_camera">
       <time start="4000" duration="3300" speed_x="90" speed_y="0"/>
@@ -22,7 +31,7 @@
     <element type="entity" name="gold" pos_x="10" pos_y="340"/>
     <element type="entity" name="silver" pos_x="670" pos_y="338"/>
     <element type="map" name="city" path="city.tmx"/>
-    <element type="text" pos_x="100" pos_y="100" txt="Hola, que tal? XD Lol viva lña dfmjoenjic ejuc c eihjc ner ic ei cie i coj" active="true"/>
+    <element type="text" name ="dialog" pos_x="100" pos_y="300" txt="Hola, que tal? XD Lol viva lña dfmjoenjic ejuc c eihjc ner ic ei cie i coj" active="true"/>
   </elements>
 
 </cutscenes>
