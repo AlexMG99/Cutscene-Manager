@@ -1,6 +1,7 @@
 # Cutscene Manager
 I am [Alex Morales Garcia](https://www.linkedin.com/in/alex-morales-garcia-aba47b173/), student of the [Bachelor’s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/). This content is generated for the second year’s subject Project 2, under supervision of lecturer [Ricard Pillosu](https://es.linkedin.com/in/ricardpillosu).
- ## What is a cutscene?
+ 
+## What is a cutscene?
  A cutscene is a scene in a videogame that may no be interactive, develops the storyline and is shown when a certain event occurs.
  ## When do we use it?
  **1. Intro**: The initial cutscene in games is the iniTial movie. It introduces the player to the universe, and shows which events lead to the actual situation of the world. There are four different ways to break down the information:
