@@ -142,7 +142,7 @@ void CutsceneManager::ExecuteCutscene(float dt)
 		{
 			is_executing = false;
 			start = true;
-			ClearCutscene();
+			//ClearCutscene();
 		}
 	}
 }

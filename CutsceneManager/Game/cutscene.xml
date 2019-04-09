@@ -17,29 +17,49 @@
     <cutscene action="modify_text" name="dialog">
       <time start ="10000" duration="100" type="change" text="Silver: Wait Goldddd!"/>
     </cutscene>
-    <cutscene action="modify_text" name="dialog">
-      <time start ="12000" duration="100" type="deactivate" />
-    </cutscene>
-    <cutscene action="modify_image" name="dialog_image">
-      <time start ="12200" duration="100" type="deactivate" />
-    </cutscene>
     <cutscene action="move_entity" entity="silver">
       <time start="13000" duration="2500" speed_x="-120" speed_y="0"/>
     </cutscene>
-    <cutscene action="move_entity" entity="gold">
-      <time start="16500" duration="1700" speed_x="0" speed_y="-90"/>
+    <cutscene action="modify_image" name="dialog_image">
+      <time start ="15500" duration="100" type="activate"/>
     </cutscene>
-    <cutscene action="move_entity" entity="gold">
-      <time start="18200" duration="5000" speed_x="30" speed_y="0"/>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="15600" duration="100" type="change" text="Gold: We should go, he is waiting"/>
     </cutscene>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="15700" duration="100" type="activate"/>
+    </cutscene>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="17700" duration="100" type="change" text="Silver: Yeah, let's go!"/>
+    </cutscene>
+    <cutscene action="modify_text" name="dialog">
+      <time start ="19000" duration="100" type="deactivate" />
+    </cutscene>
+    <cutscene action="modify_image" name="dialog_image">
+      <time start ="19200" duration="100" type="deactivate" />
+    </cutscene>
+    <cutscene action="move_camera">
+      <time start="19300" duration="3300" speed_x="0" speed_y="-30"/>
+    </cutscene>
+    <cutscene action="move_entity" entity="rival">
+      <time start="22600" duration="800" speed_x="0" speed_y="90"/>
+    </cutscene>
+    <cutscene action="move_entity" entity="rival">
+      <time start="23400" duration="2200" speed_x="-70" speed_y="0"/>
+    </cutscene>
+    <cutscene action="move_entity" entity="rival">
+      <time start="25600" duration="4000" speed_x="0" speed_y="20"/>
+    </cutscene>
+    
   </actions>
   <elements>
     <element type="image" name ="dialog_image" pos_x="85" pos_y="265" rect_x="0" rect_y="0" rect_w="370" rect_h="103" active="false"/>
     <element type="entity" name="gold" pos_x="10" pos_y="340"/>
     <element type="entity" name="silver" pos_x="670" pos_y="338"/>
+    <element type="entity" name="rival" pos_x="510" pos_y="150"/>
     <element type="map" name="city" path="city.tmx"/>
     
-    <element type="text" name ="dialog" pos_x="100" pos_y="290" txt="Gold: Tarde, como siempre." active="false"/>
+    <element type="text" name ="dialog" pos_x="100" pos_y="290" txt="Gold: Late, as always." active="false"/>
   </elements>
 
 </cutscenes>
