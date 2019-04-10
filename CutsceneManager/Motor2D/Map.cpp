@@ -157,10 +157,16 @@ bool Map::CleanUp()
 	LOG("Unloading map");
 
 	// Remove all tilesets
-	while (!data.tilesets.empty()) delete data.tilesets.front(), data.tilesets.pop_front();
+	while (!data.tilesets.empty())
+	{
+		App->tex->UnLoad(data.tilesets.front()->texture);
+		data.tilesets.front()->texture = nullptr;
+		delete data.tilesets.front(), data.tilesets.pop_front();
+	}
 
 	// Remove all layers
-	while (!data.layers.empty()) delete data.layers.front(), data.layers.pop_front();
+	while (!data.layers.empty()) 
+		delete data.layers.front(), data.layers.pop_front();
 
 	// Clean up the pugui tree
 	map_file.reset();

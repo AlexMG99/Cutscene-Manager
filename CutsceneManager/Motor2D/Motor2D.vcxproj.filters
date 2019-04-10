@@ -55,14 +55,8 @@
     <ClCompile Include="Player.cpp">
       <Filter>Engine\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="CutsceneAction.cpp">
-      <Filter>Engine\Cutscenes\Actions</Filter>
-    </ClCompile>
     <ClCompile Include="CutsceneMoveCamera.cpp">
       <Filter>Engine\Cutscenes\Actions</Filter>
-    </ClCompile>
-    <ClCompile Include="CutsceneElement.cpp">
-      <Filter>Engine\Cutscenes\Elements</Filter>
     </ClCompile>
     <ClCompile Include="CutsceneEntity.cpp">
       <Filter>Engine\Cutscenes\Elements</Filter>

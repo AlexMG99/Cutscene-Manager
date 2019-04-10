@@ -24,8 +24,6 @@ TestingScene::~TestingScene()
 // Called before the first frame
 bool TestingScene::Start()
 {
-	App->render->camera = { 0, -200 };
-	App->cutscene_manager->LoadCutscene();
 
 	return true;
 }
@@ -53,7 +51,7 @@ bool TestingScene::PreUpdate()
 		App->render->camera.x -= 10;
 
 	if (App->input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
-		App->cutscene_manager->SetExecuting(true);
+		App->cutscene_manager->PlayCutscene("cutscene.xml");
 
 	return true;
 }

@@ -17,7 +17,6 @@ bool UIElement::UIBlit()
 
 bool UIElement::UICleanUp()
 {
-	parent = nullptr;
 	return true;
 }
 

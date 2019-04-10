@@ -11,7 +11,8 @@ CutsceneImage::CutsceneImage(int pos_x, int pos_y, SDL_Rect rect, bool image)
 
 CutsceneImage::~CutsceneImage()
 {
-	//image->~UIImage();
+	delete image;
+	image = nullptr;
 }
 
 

@@ -18,12 +18,13 @@ public:
 	bool Awake(pugi::xml_node&);
 
 	bool Start() { return true; };
-	bool Update(float dt) { return true; };
-	bool CleanUp() { return true; };
+	bool Update(float dt);
+	bool CleanUp();
 
 	//Cutscene Functions
 
-	bool LoadCutscene();
+	void PlayCutscene(std::string path);
+	bool LoadCutscene(std::string path);
 	void ExecuteCutscene(float dt);
 	void ClearCutscene();
 

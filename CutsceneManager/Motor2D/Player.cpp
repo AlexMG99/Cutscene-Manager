@@ -32,8 +32,11 @@ bool Player::Update(float dt)
 
 bool Player::CleanUp()
 {
-	if(sprite)
+	if (sprite) 
+	{
 		App->tex->UnLoad(sprite);
+		sprite = nullptr;
+	}
 
 	return true;
 }

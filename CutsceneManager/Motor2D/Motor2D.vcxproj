@@ -76,8 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CutsceneAction.cpp" />
-    <ClCompile Include="CutsceneElement.cpp" />
     <ClCompile Include="CutsceneEntity.cpp" />
     <ClCompile Include="CutsceneImage.cpp" />
     <ClCompile Include="CutsceneManager.cpp" />
