@@ -24,7 +24,7 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 	if (result == NULL)
 		LOG("Could not load map xml file cutscene.xml. Pugi error: %s", result.description());
 	else
-	ret = true;
+		ret = true;
 
 	return ret;
 }
