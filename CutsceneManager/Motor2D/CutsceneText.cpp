@@ -11,7 +11,7 @@ CutsceneText::CutsceneText(int pos_x, int pos_y, std::string text, bool image)
 
 CutsceneText::~CutsceneText()
 {
-	text->~UILabel();
+	App->gui->DeleteElement(text);
 }
 
 void CutsceneText::ChangeState(bool active)
