@@ -125,6 +125,7 @@ bool CutsceneManager::LoadCutscene(std::string path)
 				cutscene_element = new CutsceneText(cutscene_element_node.attribute("pos_x").as_int(),
 					cutscene_element_node.attribute("pos_y").as_int(),
 					cutscene_element_node.attribute("txt").as_string(),
+					cutscene_element_node.attribute("size").as_uint(),
 					cutscene_element_node.attribute("active").as_bool(true)
 				);
 			}

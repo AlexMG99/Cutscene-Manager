@@ -24,6 +24,7 @@ TestingScene::~TestingScene()
 // Called before the first frame
 bool TestingScene::Start()
 {
+	App->render->camera = { 0, -200 };
 
 	return true;
 }

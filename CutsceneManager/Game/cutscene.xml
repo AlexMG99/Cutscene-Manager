@@ -69,10 +69,10 @@
       <time start ="29700" duration="100" type="change" text="Silver: My new boyfriend, Ruby."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="32700" duration="100" type="change" text="Ruby: Gold?... It's been a while."/>
+      <time start ="32700" duration="100" type="change" text="Gold: No way, you're Ruby!"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="36700" duration="100" type="change" text="Gold: No way, you're Ruby!"/>
+      <time start ="36700" duration="100" type="change" text="Ruby: Gold?... It's been a while."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
       <time start ="39700" duration="100" type="change" text="Silver: What's going on?"/>
@@ -114,7 +114,13 @@
       <time start ="57700" duration="100" type="deactivate"/>
     </cutscene>
     <cutscene action="move_entity" entity="silver">
-      <time start="58500" duration="5000" speed_x="50" speed_y="0"/>
+      <time start="58500" duration="7000" speed_x="50" speed_y="0"/>
+    </cutscene>
+    <cutscene action="modify_text" name="end_text">
+      <time start="65600" duration="100" type="activate"/>
+    </cutscene>
+    <cutscene action="move_camera">
+      <time start="66000" duration="2000" speed_x="0" speed_y="60"/>
     </cutscene>
     
   </actions>
@@ -125,8 +131,9 @@
     <element type="entity" name="silver" pos_x="670" pos_y="338"/>
     <element type="entity" name="rival" pos_x="670" pos_y="365"/>
     <element type="map" name="city" path="city.tmx"/>
-    <element type="text" name ="dialog" pos_x="100" pos_y="290" txt="Gold: Late, as always." active="false"/>
-    <element type="text" name ="bubble_text" pos_x="215" pos_y="185" txt="???" active="false"/>
+    <element type="text" name ="dialog" pos_x="100" pos_y="290" txt="Gold: Late, as always." active="false" size="27"/>
+    <element type="text" name ="bubble_text" pos_x="217" pos_y="187" txt="???" active="false" size="20"/>
+    <element type="text" name ="end_text" pos_x="135" pos_y="165" txt="THE END" active="false" size="100"/>
   </elements>
 
 </cutscenes>

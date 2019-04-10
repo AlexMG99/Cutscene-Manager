@@ -4,9 +4,9 @@
 #include "UILabel.h"
 #include "Fonts.h"
 
-CutsceneText::CutsceneText(int pos_x, int pos_y, std::string text, bool image)
+CutsceneText::CutsceneText(int pos_x, int pos_y, std::string text, uint size, bool image)
 {
-	this->text = App->gui->CreateLabel({ pos_x, pos_y }, "ui/pkmn_font.ttf", 27, text, { 0,0,0,255 }, 5, image);
+	this->text = App->gui->CreateLabel({ pos_x, pos_y }, "ui/pkmn_font.ttf", size, text, { 0,0,0,255 }, 5, image);
 }
 
 CutsceneText::~CutsceneText()

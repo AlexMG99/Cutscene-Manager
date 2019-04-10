@@ -7,7 +7,7 @@ class UILabel;
 
 class CutsceneText :public CutsceneElement {
 public:
-	CutsceneText(int pos_x, int pos_y, std::string text, bool image);
+	CutsceneText(int pos_x, int pos_y, std::string text, uint size, bool image);
 	~CutsceneText();
 
 	void ChangeState(bool active);
