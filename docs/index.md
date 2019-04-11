@@ -50,9 +50,7 @@ A real time cutscene means that the system is using the games graphics engine to
 
 In the next two images there is a link to a in-engine cutscenes:
 
-[<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/pokemon_diamond.jpg?raw=true" width="400" height="240">](https://www.youtube.com/watch?v=b1TNUPLXLqA)
- 
-[<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/stardew_valley.png?raw=true)" width="400" height="240">](https://www.youtube.com/watch?v=qCjfhCwVfKk&list=PLmTuEQqx9PwUCaC6j19bOj3h0fodYRcoB&index=4)
+[<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/pokemon_diamond.jpg?raw=true" width="400" height="240">](https://www.youtube.com/watch?v=b1TNUPLXLqA) [<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/stardew_valley.png?raw=true)" width="400" height="240">](https://www.youtube.com/watch?v=qCjfhCwVfKk&list=PLmTuEQqx9PwUCaC6j19bOj3h0fodYRcoB&index=4)
 
 
 ### Interactive
