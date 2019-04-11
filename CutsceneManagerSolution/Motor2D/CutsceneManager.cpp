@@ -48,13 +48,12 @@ void CutsceneManager::PlayCutscene(std::string path)
 	if (!is_executing) 
 	{
 		LoadCutscene(path);
-		SetExecuting(true);
+		is_executing = true;
 	}
 }
 
 bool CutsceneManager::LoadCutscene(std::string path)
 {
-	//TODO 1: Iterate the differents cutscene. Save the cutscene in the cutscenes vector.
 
 	bool ret = false;
 

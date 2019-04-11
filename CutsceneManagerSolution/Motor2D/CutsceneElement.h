@@ -11,7 +11,6 @@ public:
 
 public:
 	bool active = false;
-	std::string path;
 	std::string name;
 };
 
