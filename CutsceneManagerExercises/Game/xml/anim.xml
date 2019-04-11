@@ -1,0 +1,124 @@
+<!-- Animations -->
+
+<entities>
+  <gold>
+    <animations>
+      <i_down speed="5">
+        <frame x="7" y="5" w="17" h="26"/>
+      </i_down>
+      <i_right speed="5">
+        <frame x="6" y="69" w="19" h="26"/>
+      </i_right>
+      <i_up speed="5">
+        <frame x="7" y="101" w="17" h="26"/>
+      </i_up>
+      <i_left speed="5">
+        <frame x="7" y="37" w="19" h="26"/>
+      </i_left>
+      <down speed="5">
+        <frame x="7" y="5" w="17" h="26"/>
+        <frame x="39" y="4" w="17" h="27"/>
+        <frame x="71" y="5" w="17" h="26"/>
+        <frame x="103" y="4" w="17" h="27"/>
+      </down>
+      <right speed="5">
+        <frame x="6" y="69" w="19" h="26"/>
+        <frame x="38" y="68" w="19" h="27"/>
+        <frame x="70" y="69" w="19" h="26"/>
+        <frame x="102" y="68" w="19" h="27"/>
+      </right>
+      <up speed="5">
+        <frame x="7" y="101" w="17" h="26"/>
+        <frame x="39" y="100" w="17" h="27"/>
+        <frame x="71" y="101" w="17" h="26"/>
+        <frame x="103" y="100" w="17" h="27"/>
+      </up>
+      <left speed="5">
+        <frame x="7" y="37" w="19" h="26"/>
+        <frame x="39" y="36" w="19" h="27"/>
+        <frame x="71" y="37" w="19" h="26"/>
+        <frame x="103" y="36" w="19" h="27"/>
+      </left>
+    </animations>
+  </gold>
+  <silver>
+    <animations>
+      <i_down speed="5">
+        <frame x="160" y="4" w="23" h="23"/>
+      </i_down>
+      <i_right speed="5">
+        <frame x="163" y="91" w="18" h="23"/>
+      </i_right>
+      <i_up speed="5">
+        <frame x="159" y="61" w="25" h="26"/>
+      </i_up>
+      <i_left speed="5">
+        <frame x="163" y="33" w="18" h="23"/>
+      </i_left>
+      <down speed="5">
+        <frame x="160" y="4" w="23" h="23"/>
+        <frame x="131" y="4" w="23" h="25"/>
+        <frame x="160" y="4" w="23" h="23"/>
+        <frame x="189" y="4" w="23" h="25"/>
+      </down>
+      <right speed="5">
+        <frame x="163" y="91" w="18" h="23"/>
+        <frame x="138" y="91" w="18" h="24"/>
+        <frame x="163" y="91" w="18" h="23"/>
+        <frame x="187" y="91" w="18" h="24"/>
+      </right>
+      <up speed="5">
+        <frame x="159" y="61" w="25" h="26"/>
+        <frame x="136" y="61" w="25" h="24"/>
+        <frame x="159" y="61" w="25" h="26"/>
+        <frame x="136" y="61" w="25" h="26"/>
+      </up>
+      <left speed="5">
+        <frame x="163" y="33" w="18" h="23"/>
+        <frame x="140" y="33" w="19" h="24"/>
+        <frame x="163" y="33" w="18" h="23"/>
+        <frame x="187" y="33" w="19" h="24"/>
+      </left>
+    </animations>
+  </silver>
+  <rival>
+    <animations>
+      <i_down>
+        <frame x="277" y="33" w="19" h="26"/>
+      </i_down>
+      <i_right speed="5">
+        <frame x="246" y="34" w="17" h="25"/>
+      </i_right>
+      <i_up speed="5">
+        <frame x="214" y="1" w="17" h="26"/>
+      </i_up>
+      <i_left speed="5">
+        <frame x="215" y="66" w="17" h="25"/>
+      </i_left>
+      <down speed="5">
+        <frame x="277" y="33" w="19" h="26"/>
+        <frame x="277" y="64" w="19" h="28"/>
+        <frame x="277" y="33" w="19" h="26"/>
+        <frame x="277" y="96" w="19" h="28"/>
+      </down>
+      <right speed="5">
+        <frame x="246" y="34" w="17" h="25"/>
+        <frame x="246" y="65" w="17" h="26"/>
+        <frame x="246" y="34" w="17" h="25"/>
+        <frame x="246" y="97" w="17" h="26"/>
+      </right>
+      <up speed="5">
+        <frame x="214" y="1" w="17" h="26"/>
+        <frame x="246" y="1" w="17" h="28"/>
+        <frame x="214" y="1" w="17" h="26"/>
+        <frame x="278" y="1" w="17" h="27"/>
+      </up>
+      <left speed="5">
+        <frame x="215" y="66" w="17" h="25"/>
+        <frame x="215" y="33" w="17" h="26"/>
+        <frame x="215" y="66" w="17" h="25"/>
+        <frame x="215" y="97" w="17" h="26"/>
+      </left>
+    </animations>
+  </rival>
+</entities>

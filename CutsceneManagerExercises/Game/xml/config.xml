@@ -1,0 +1,33 @@
+<!-- Config file for the game -->
+
+<config>
+  <app framerate_cap="60">
+    <title>Blue Alert</title>
+    <organization>UPC</organization>
+  </app>
+	
+  <renderer>
+    <vsync value="false"/>
+  </renderer>
+
+  <window>
+    <resolution width="1024" height="768" scale="2"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
+  <file_system>
+    <path>data.zip</path>
+  </file_system>
+
+  <cutscene_manager>
+    <path>cutscene.xml</path>
+  </cutscene_manager>
+
+  <map>
+    <folder>maps/</folder>
+  </map>
+
+</config>
