@@ -48,14 +48,26 @@ A real time cutscene means that the system is using the games graphics engine to
  
  - Disadvantages: Lower quality, but nowadays the difference between the graphics quality is not as wide as in the past.
 
+In the next two images there is a link to a in-engine cutscenes:
+
+[<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/pokemon_diamond.jpg?raw=true" width="400" height="240">](https://www.youtube.com/watch?v=b1TNUPLXLqA)
+ 
+[<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/stardew_valley.png?raw=true)" width="400" height="240">](https://www.youtube.com/watch?v=qCjfhCwVfKk&list=PLmTuEQqx9PwUCaC6j19bOj3h0fodYRcoB&index=4)
+
+
 ### Interactive
 Interactive cutscenes involves the player taking control of the player in certain moments. The player usually has to pressed a button or a sequence of buttons, when they appear on the screen, in order to succed or continue the action.
 
 - Advantages: The cutscene doesn't stop the game flow, as the player has to be attentive of the screen and what is happening.
 - Disadvantages: The player may be less focused on what the cutscene is explaining. Limits the gameplay and usually simplifies it to QTE (Quick Time Events).
 
+[Spiderman 3 Interactive Cutscene](https://www.youtube.com/watch?v=5Js72d-LpEI)
+
 ### Live-action 
 Live-action cutscenes involves real actors on a set or in front of a chroma screen.
+
+- Advantages:
+- Disadvantages: 
 
 ## Cutscene in Engines
 I focus mainly in two Engines, Unreal and Unity. In both, you have a time bar, where you can add elements and change it's characateristics and attributes through time. There are key-frames, which are points where you can change the properties of the object. The engine will make an interpolation with the two positions and will generate a smooth transition. The properties that can be changed are rotation, scale, position, state, etc.
@@ -300,6 +312,9 @@ Example of the xml:
 			</cutscene>
 		</actions>
 	</cutscene>
+	
+	
+## Exercises
 
 You can download the exercises [here](https://github.com/AlexMG99/Cutscene-Manager-Research/releases/tag/V.1.1).
 
