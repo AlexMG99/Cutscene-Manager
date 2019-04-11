@@ -2,9 +2,11 @@
 I am [Alex Morales Garcia](https://www.linkedin.com/in/alex-morales-garcia-aba47b173/), student of the [Bachelor’s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/). This content is generated for the second year’s subject Project 2, under supervision of lecturer [Ricard Pillosu](https://es.linkedin.com/in/ricardpillosu).
 
  ## What is a cutscene?
+ 
  A cutscene is a scene in a videogame that may no be interactive, develops the storyline and is shown when a certain event occurs.
  
  ## When do we use it?
+ 
  **1. Intro**: The initial cutscene in games is the iniTial movie. It introduces the player to the universe, and shows which events lead to the actual situation of the world. There are four different ways to break down the information:
   - Plot: It gives to the player lots of details and information about how he/she get there and what is about to encounter. Example: Command & Conquer
   
@@ -32,18 +34,28 @@ In Bioshock, the player has different endings depending on the path chosen. Ther
 ## Cutscene Types
 
 ### Pre-rendered
-Advantages: More graphic quality.
-Disadvantages: Occupy lots of memory, big production
+The pre-rendered cutscene are animated and rendered beforehand.
+- Advantages: More graphic quality, allows the developers render things that willl be impossible in-engine.
+
+- Disadvantages: Occupy lots of memory. The difference between the pre-rendered and in-game graphics.
 
 [Kingdom Hearts III Intro](https://www.youtube.com/watch?v=PwsRQSkQc_A)
 
 ### In Game Engine
-A real time cutscene means that the system is using the games graphics engine to render the it.
+A real time cutscene means that the system is using the games graphics engine to render it.
 
- - Advantages: The feedback with the player appeareance
- - Disadvantages: The feedback with the player appeareance
+ - Advantages: The feedback with the player appeareance. If the engine is used for rendering the scenes, there is no need to integrate other team specialaced in the cutscenes animation and rendering.
+ 
+ - Disadvantages: Lower quality, but nowadays the difference between the graphics quality is not as wide as in the past.
 
 ### Interactive
+Interactive cutscenes involves the player taking control of the player in certain moments. The player usually has to pressed a button or a sequence of buttons, when they appear on the screen, in order to succed or continue the action.
+
+- Advantages: The cutscene doesn't stop the game flow, as the player has to be attentive of the screen and what is happening.
+- Disadvantages: The player may be less focused on what the cutscene is explaining. Limits the gameplay and usually simplifies it to QTE (Quick Time Events).
+
+### Live-action 
+Live-action cutscenes involves real actors on a set or in front of a chroma screen.
 
 ## Cutscene in Engines
 I focus mainly in two Engines, Unreal and Unity. In both, you have a time bar, where you can add elements and change it's characateristics and attributes through time. There are key-frames, which are points where you can change the properties of the object. The engine will make an interpolation with the two positions and will generate a smooth transition. The properties that can be changed are rotation, scale, position, state, etc.
@@ -169,10 +181,11 @@ Text XML example:
 
 - **Creating an action**
 
+The actions are changes in the elements properties during the cutscene. It includes camera and entity movement, and modifying properties from the text or image.
 This manager has four different actions:
 
-- MoveEntity
 - MoveCamera
+- MoveEntity
 - ModifyText
 - ModifyImage
 
@@ -204,12 +217,88 @@ The structure of the xml is:
 	</cutscene>
 
 #### Creating a MoveCamera
+MoveCamera changes the camera position at certain speed. The attributes needed are:
+- speed_x: x speed of the camera movement.
+- speed_y; y speed of the camera movement.
 
+Example of the move camera xml:
+
+	<cutscene>
+	    <elements>
+		     <!-- Here will go all the elements used in the cutscene-->
+		</elements>
+		<actions>
+			<cutscene action="move_camera">
+				<time start="4000" duration="2000" speed_x="130" speed_y="0"/>
+			</cutscene>
+		</actions>
+	</cutscene>
 
 #### Creating a MoveEntity
+MoveEntity changes the entity position. We need:
+- entity: name of the entity that moves.
+- speed_x: x speed of the player movement.
+- speed_y; y speed of the player movement.
 
+Example of the MoveEntity in xml:
+
+	<cutscene>
+	    <elements>
+		     <!-- Here will go all the elements used in the cutscene-->
+		</elements>
+		<actions>
+			<cutscene action="move_entity" entity="gold">
+				<time start="4000" duration="2000" speed_x="0" speed_y="200"/>
+			</cutscene>
+		</actions>
+	</cutscene>
 
 #### Creating a ModifyImage
+ModifyImage has two different functions:
 
+ - Activate: the image is visible.
+ - Deactivate: the image is not visible.
+
+The attributes required are:
+- name: name of the object that will affect this action.
+- type: type of the action (activate or deactivate).
+
+Example of the xml:
+
+	<cutscene>
+	    <elements>
+		     <!-- Here will go all the elements used in the cutscene-->
+		</elements>
+		<actions>
+			<cutscene action="modify_image" name="dialog_image">
+		      <time start ="7500" duration="100" type="activate"/>
+			</cutscene>
+		</actions>
+	</cutscene>
 
 #### Creating a ModifyText
+ModifyText has three different functions:
+
+ - Activate: the text is visible.
+ - Deactivate: the text is not visible.
+ - Change: the text content changes
+
+The attributes required are:
+- name: name of the object that will affect this action.
+- type: type of the action (activate, deactivate or change).
+- text: new text
+
+Example of the xml:
+
+	<cutscene>
+	    <elements>
+		     <!-- Here will go all the elements used in the cutscene-->
+		</elements>
+		<actions>
+			<cutscene action="modify_text" name="dialog">
+		      <time start ="15600" duration="100" type="change" text="Gold: Finally, I thought you won't come."/>
+			</cutscene>
+		</actions>
+	</cutscene>
+
+## Exercises
