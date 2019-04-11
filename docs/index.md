@@ -64,7 +64,7 @@ Interactive cutscenes involves the player taking control of the player in certai
 ### Live-action 
 Live-action cutscenes involves real actors on a set or in front of a chroma screen. Some game examples are Command and Conquer, Resident Evil 2, Night Trap...
 
-## Mixed media
+### Mixed media
 The game uses both pre-rendered and real time cutscenes depending on what the developers feel it's appropiate. For example, Final Fantasy VII.
 
 It can also referred to the union of two cinematic types at the same time. For example, during the 90s manay games use live-action cinematics for the actors which were superimposed upon pre-rendered backgrounds. Example: Killing Time. 
