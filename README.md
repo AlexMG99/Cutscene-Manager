@@ -7,6 +7,12 @@ This project contains a research about a Cutscene Manager.
 You can find my research in this [website](https://alexmg99.github.io/Cutscene-Manager-Research/).
 
 Link to the [repository](https://github.com/AlexMG99/Cutscene-Manager-Research).
+
+## Controls
+
+- __[R]__: Execute Cutscene
+
+
 ## Software used
 
  - Visual Studio
