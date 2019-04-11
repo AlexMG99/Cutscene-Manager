@@ -10,8 +10,6 @@ public:
 	CutsceneMap(std::string path);
 	~CutsceneMap();
 
-private:
-
 };
 
 

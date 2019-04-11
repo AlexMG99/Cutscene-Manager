@@ -6,7 +6,7 @@
       <time start="0" duration="4000" speed_x="88" speed_y="0"/>
     </cutscene>
     <cutscene action="move_camera">
-      <time start="4000" duration="2000" speed_x="70" speed_y="0"/>
+      <time start="4000" duration="2000" speed_x="130" speed_y="0"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
       <time start ="7500" duration="100" type="activate"/>
@@ -120,7 +120,7 @@
       <time start="65600" duration="100" type="activate"/>
     </cutscene>
     <cutscene action="move_camera">
-      <time start="66000" duration="2000" speed_x="0" speed_y="60"/>
+      <time start="66000" duration="2000" speed_x="0" speed_y="140"/>
     </cutscene>
     
   </actions>
