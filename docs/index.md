@@ -62,7 +62,12 @@ Interactive cutscenes involves the player taking control of the player in certai
 [Spiderman 3 Interactive Cutscene](https://www.youtube.com/watch?v=5Js72d-LpEI)
 
 ### Live-action 
-Live-action cutscenes involves real actors on a set or in front of a chroma screen.
+Live-action cutscenes involves real actors on a set or in front of a chroma screen. Some game examples are Command and Conquer, Resident Evil 2, Night Trap...
+
+## Mixed media
+The game uses both pre-rendered and real time cutscenes depending on what the developers feel it's appropiate. For example, Final Fantasy VII.
+
+It can also referred to the union of two cinematic types at the same time. For example, during the 90s manay games use live-action cinematics for the actors which were superimposed upon pre-rendered backgrounds. Example: Killing Time. 
 
 ## Cutscene in Engines
 I focus mainly in two Engines, Unreal and Unity. In both, you have a time bar, where you can add elements and change it's characateristics and attributes through time. There are key-frames, which are points where you can change the properties of the object. The engine will make an interpolation with the two positions and will generate a smooth transition. The properties that can be changed are rotation, scale, position, state, etc.
