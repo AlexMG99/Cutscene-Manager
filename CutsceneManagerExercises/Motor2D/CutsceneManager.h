@@ -23,13 +23,20 @@ public:
 
 	//Cutscene Functions
 
+	// Starts the cutscene
 	void PlayCutscene(std::string path);
+
+	// Load all the cutscene elements and actions from the xml
 	bool LoadCutscene(std::string path);
+
+	// Executes by order all the cutscenes
 	void ExecuteCutscene(float dt);
+
+	// Clear all the elements of the cutscenes
 	void ClearCutscene();
 
+	// Give acces to the Cutscene timer
 	double GetTimer();
-	void SetExecuting(bool executing);
 
 private:
 	PerfTimer cutscene_timer;

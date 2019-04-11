@@ -14,18 +14,7 @@ void CutsceneMoveEntity::Execute(float dt)
 	CutsceneEntity* element = nullptr;
 	double start = App->cutscene_manager->GetTimer() - start_time;
 
-	if (entity_name == "gold")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("gold")->second;
-	}
-	else if (entity_name == "silver")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("silver")->second;
-	}
-	else if (entity_name == "rival")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("rival")->second;
-	}
+	element = (CutsceneEntity*)App->cutscene_manager->elements.find(entity_name)->second;
 
 	if (start < duration_time)
 	{

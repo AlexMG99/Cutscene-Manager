@@ -168,7 +168,7 @@ void CutsceneManager::ExecuteCutscene(float dt)
 
 		if (item != actions.end())
 		{
-			if (cutscene_timer.ReadMs() > (*item)->start_time)
+			if (cutscene_timer.ReadMs() > (*item)->start_time || (*item)->duration_time == 0)
 				(*item)->Execute(dt);
 		}
 		else

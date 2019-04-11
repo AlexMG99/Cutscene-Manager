@@ -14,25 +14,19 @@ void CutsceneMoveEntity::Execute(float dt)
 	CutsceneEntity* element = nullptr;
 	double start = App->cutscene_manager->GetTimer() - start_time;
 
-	if (entity_name == "gold")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("gold")->second;
-	}
-	else if (entity_name == "silver")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("silver")->second;
-	}
-	else if (entity_name == "rival")
-	{
-		element = (CutsceneEntity*)App->cutscene_manager->elements.find("rival")->second;
-	}
+	// TODO7: Find the corresponding entity depending on the entity_name that has been passed
+	// All the elements are in a map, which first value is a string and a second one is a CutsceneElement
+	// there is a function in maps which is find(). You have to find it by the name and acces to the second element. It is only one line
 
 	if (start < duration_time)
 	{
-		element->GetEntity()->speed = { player_speed.x * dt, player_speed.y * dt };
-		if (duration_time - start < 100)
+		if (element != nullptr) 
 		{
-			element->GetEntity()->speed = { 0,0 };
+			element->GetEntity()->speed = { player_speed.x * dt, player_speed.y * dt };
+			if (duration_time - start < 100)
+			{
+				element->GetEntity()->speed = { 0,0 };
+			}
 		}
 	}
 }

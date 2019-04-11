@@ -245,5 +245,13 @@
     <Filter Include="Engine\UIElement">
       <UniqueIdentifier>{0957ead3-5256-4789-a81d-32b50395b7d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\xml">
+      <UniqueIdentifier>{77f7b13a-88c1-486f-9838-92b7ea4f9f59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Game\xml\cutscene.xml">
+      <Filter>Engine\xml</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

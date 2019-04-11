@@ -1,5 +1,6 @@
 #include "j1App.h"
 #include "CutsceneImage.h"
+#include "p2Log.h"
 #include "GUI.h"
 #include "UIImage.h"
 #include "SDL/include/SDL_rect.h"

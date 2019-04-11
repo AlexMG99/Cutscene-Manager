@@ -29,7 +29,9 @@ bool CutsceneManager::Awake(pugi::xml_node &config)
 
 bool CutsceneManager::Update(float dt)
 {
-	ExecuteCutscene(dt);
+	//TODO8: Uncomment this code, which basically starts the Cutscene and manage it
+	// It is the main function that allows everything works
+	//ExecuteCutscene(dt);
 
 	return true;
 }
@@ -48,16 +50,16 @@ void CutsceneManager::PlayCutscene(std::string path)
 	if (!is_executing) 
 	{
 		LoadCutscene(path);
-		SetExecuting(true);
+		is_executing = true;
 	}
 }
 
 bool CutsceneManager::LoadCutscene(std::string path)
 {
-	//TODO 1: Iterate the differents cutscene. Save the cutscene in the cutscenes vector.
 
 	bool ret = false;
 
+	// Here we load the xml file
 	pugi::xml_parse_result result = cutscene_file.load_file(path.c_str());
 
 	if (result == NULL)
@@ -68,6 +70,7 @@ bool CutsceneManager::LoadCutscene(std::string path)
 
 		CutsceneAction* cutscene_action = nullptr;
 
+		// The node is pointing to the first action node of the XML.
 		for (pugi::xml_node cutscene_action_node = cutscene_file.first_child().child("actions").child("cutscene"); cutscene_action_node; cutscene_action_node = cutscene_action_node.next_sibling())
 		{
 			std::string action = cutscene_action_node.attribute("action").as_string();
@@ -78,12 +81,6 @@ bool CutsceneManager::LoadCutscene(std::string path)
 			if (action == "move_camera")
 			{
 				cutscene_action = new CutsceneMoveCamera(start, duration, cutscene_action_node.child("time").attribute("speed_x").as_int(), cutscene_action_node.child("time").attribute("speed_y").as_int());
-			}
-			else if (action == "move_entity")
-			{
-				cutscene_action = new CutsceneMoveEntity(start, duration,
-					cutscene_action_node.child("time").attribute("speed_x").as_float(), cutscene_action_node.child("time").attribute("speed_y").as_float(),
-					cutscene_action_node.attribute("entity").as_string());
 			}
 			else if (action == "modify_text")
 			{
@@ -98,25 +95,21 @@ bool CutsceneManager::LoadCutscene(std::string path)
 					cutscene_action_node.attribute("name").as_string(),
 					cutscene_action_node.child("time").attribute("type").as_string());
 			}
+			// TODO6: Create a new CutsceneMoveEntity that will be load from the xml
+			// Check CutsceneMoveEntity for more information
 
 			actions.push_back(cutscene_action);
 		}
 
 		CutsceneElement* cutscene_element = nullptr;
 
-
+		// The node is pointing to the first element node of the XML.
 		for (pugi::xml_node cutscene_element_node = cutscene_file.first_child().child("elements").child("element"); cutscene_element_node; cutscene_element_node = cutscene_element_node.next_sibling())
 		{
 			std::string type = cutscene_element_node.attribute("type").as_string();
 			std::string name = cutscene_element_node.attribute("name").as_string();
 
-			if (type == "entity")
-			{
-				cutscene_element = new CutsceneEntity(cutscene_element_node.attribute("pos_x").as_int(),
-					cutscene_element_node.attribute("pos_y").as_int(),
-					cutscene_element_node.attribute("name").as_string());
-			}
-			else if (type == "map")
+			if (type == "map")
 			{
 				cutscene_element = new CutsceneMap(cutscene_element_node.attribute("path").as_string());
 			}
@@ -129,20 +122,15 @@ bool CutsceneManager::LoadCutscene(std::string path)
 					cutscene_element_node.attribute("active").as_bool(true)
 				);
 			}
-			else if (type == "image")
-			{
-				cutscene_element = new CutsceneImage(cutscene_element_node.attribute("pos_x").as_int(),
-					cutscene_element_node.attribute("pos_y").as_int(),
-					{
-						cutscene_element_node.attribute("rect_x").as_int(),
-						cutscene_element_node.attribute("rect_y").as_int(),
-						cutscene_element_node.attribute("rect_w").as_int(),
-						cutscene_element_node.attribute("rect_h").as_int()
-					},
-					cutscene_element_node.attribute("active").as_bool(true));
-			}
+			//TODO4: Create a new CutsceneEntity element which will be load from the xml.
+			// Check CutsceneEntity constructor for more information.
+
+			//TODO5: Create a new CutsceneImage element which will be load from the xml.
+			// Check CutsceneImage constructor for more information.
 
 			cutscene_element->active = cutscene_element_node.attribute("active").as_bool(true);
+
+
 			elements.insert(std::pair <std::string, CutsceneElement*>(name, cutscene_element));
 		}
 	}
@@ -152,8 +140,10 @@ bool CutsceneManager::LoadCutscene(std::string path)
 
 void CutsceneManager::ExecuteCutscene(float dt)
 {
+
 	if (is_executing)
 	{
+		// The cutscene_timer starts, and item points to the first item of the action list
 		if (start) {
 			cutscene_timer.Start();
 
@@ -161,11 +151,13 @@ void CutsceneManager::ExecuteCutscene(float dt)
 			start = false;
 		}
 
+		// Checks if the actions has finished and goes to the next action in the case that is finished.
 		if ((cutscene_timer.ReadMs() - (*item)->start_time) > (*item)->duration_time)
 		{
 			++item;
 		}
 
+		// This calls all the functions 
 		if (item != actions.end())
 		{
 			if (cutscene_timer.ReadMs() > (*item)->start_time)
@@ -205,9 +197,4 @@ void CutsceneManager::ClearCutscene()
 double CutsceneManager::GetTimer()
 {
 	return cutscene_timer.ReadMs();
-}
-
-void CutsceneManager::SetExecuting(bool executing)
-{
-	is_executing = executing;
 }

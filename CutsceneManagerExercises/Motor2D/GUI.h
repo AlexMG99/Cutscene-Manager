@@ -54,7 +54,6 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	// TODO 2: Create the factory methods
 	// Gui creation functions
 	UIImage* CreateImage(iPoint pos, SDL_Rect rect, bool image = true, UIElement* parent = nullptr);
 	UILabel* CreateLabel(iPoint pos, std::string path, int size, std::string text, SDL_Color color, int max_width = 0, bool image = true, UIElement* parent = nullptr);

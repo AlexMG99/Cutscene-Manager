@@ -9,25 +9,25 @@
       <time start="4000" duration="2000" speed_x="130" speed_y="0"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="7500" duration="100" type="activate"/>
+      <time start ="7500" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="7600" duration="100" type="activate"/>
+      <time start ="7600" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="10000" duration="100" type="change" text="Silver: Hey Goldddd!"/>
+      <time start ="10000" type="change" text="Silver: Hey Goldddd!"/>
     </cutscene>
     <cutscene action="move_entity" entity="silver">
       <time start="13000" duration="2500" speed_x="-120" speed_y="0"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="15600" duration="100" type="change" text="Gold: Finally, I thought you won't come."/>
+      <time start ="15600" type="change" text="Gold: Finally, I thought you won't come."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="18700" duration="100" type="change" text="Silver: Sorry, I was just... You know..."/>
+      <time start ="18700" type="change" text="Silver: Sorry, I was just... You know..."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="21700" duration="100" type="change" text="Silver: UwU"/>
+      <time start ="21700" type="change" text="Silver: UwU"/>
     </cutscene>
     <cutscene action="move_entity" entity="rival">
       <time start="21800" duration="1200" speed_x="-275" speed_y="0"/>
@@ -36,61 +36,61 @@
       <time start="23000" duration="500" speed_x="0" speed_y="-30"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="23500" duration="100" type="change" text="Random: Did you just say UwU to my gf?"/>
+      <time start ="23500" type="change" text="Random: Did you just say UwU to my gf?"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="25600" duration="100" type="deactivate"/>
+      <time start ="25600" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="25700" duration="100" type="deactivate"/>
+      <time start ="25700" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_image" name="bubble_text_image">
-      <time start ="25800" duration="100" type="activate"/>
+      <time start ="25800" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="bubble_text">
-      <time start ="25900" duration="100" type="activate"/>
+      <time start ="25900" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="bubble_text">
-      <time start ="26800" duration="100" type="deactivate"/>
+      <time start ="26800" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_image" name="bubble_text_image">
-      <time start ="26900" duration="100" type="deactivate"/>
+      <time start ="26900" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="27000" duration="100" type="change" text="Gold: Who's this random?"/>
+      <time start ="27000" type="change" text="Gold: Who's this random?"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="27500" duration="100" type="activate"/>
+      <time start ="27500" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="27600" duration="100" type="activate"/>
+      <time start ="27600" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="29700" duration="100" type="change" text="Silver: My new boyfriend, Ruby."/>
+      <time start ="29700" type="change" text="Silver: My new boyfriend, Ruby."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="32700" duration="100" type="change" text="Gold: No way, you're Ruby!"/>
+      <time start ="32700" type="change" text="Gold: No way, you're Ruby!"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="36700" duration="100" type="change" text="Ruby: Gold?... It's been a while."/>
+      <time start ="36700" type="change" text="Ruby: Gold?... It's been a while."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="39700" duration="100" type="change" text="Silver: What's going on?"/>
+      <time start ="39700" type="change" text="Silver: What's going on?"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="42700" duration="100" type="change" text="Ruby: Mmmm... We were... b-"/>
+      <time start ="42700" type="change" text="Ruby: Mmmm... We were... b-"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="43700" duration="100" type="change" text="Gold: We were boyfriends."/>
+      <time start ="43700" type="change" text="Gold: We were boyfriends."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="46700" duration="100" type="change" text="Silver: We should do a threesome..."/>
+      <time start ="46700" type="change" text="Silver: We should do a threesome..."/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="48000" duration="100" type="deactivate"/>
+      <time start ="48000" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="48100" duration="100" type="deactivate"/>
+      <time start ="48100" type="deactivate"/>
     </cutscene>
     <cutscene action="move_entity" entity="gold">
       <time start="48500" duration="2000" speed_x="-250" speed_y="0"/>
@@ -99,25 +99,25 @@
       <time start="50500" duration="2000" speed_x="0" speed_y="250"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="53600" duration="100" type="change" text="Silver: It was just a joke..."/>
+      <time start ="53600" type="change" text="Silver: It was just a joke..."/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="54600" duration="100" type="activate"/>
+      <time start ="54600" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="54700" duration="100" type="activate"/>
+      <time start ="54700" type="activate"/>
     </cutscene>
     <cutscene action="modify_text" name="dialog">
-      <time start ="57600" duration="100" type="deactivate"/>
+      <time start ="57600" type="deactivate"/>
     </cutscene>
     <cutscene action="modify_image" name="dialog_image">
-      <time start ="57700" duration="100" type="deactivate"/>
+      <time start ="57700" type="deactivate"/>
     </cutscene>
     <cutscene action="move_entity" entity="silver">
       <time start="58500" duration="7000" speed_x="50" speed_y="0"/>
     </cutscene>
     <cutscene action="modify_text" name="end_text">
-      <time start="65600" duration="100" type="activate"/>
+      <time start="65600" type="activate"/>
     </cutscene>
     <cutscene action="move_camera">
       <time start="66000" duration="2000" speed_x="0" speed_y="140"/>
