@@ -127,7 +127,7 @@
   <elements>
     <element type="image" name ="dialog_image" pos_x="85" pos_y="265" rect_x="0" rect_y="0" rect_w="370" rect_h="103" active="false"/>
     <element type="image" name ="bubble_text_image" pos_x="210" pos_y="180" rect_x="41" rect_y="104" rect_w="40" rect_h="34" active="false"/>
-    <element type="entity" name="gold" pos_x="10" pos_y="340"/>
+    <element type="entity" name="pedro" pos_x="10" pos_y="340"/>
     <element type="entity" name="silver" pos_x="670" pos_y="338"/>
     <element type="entity" name="rival" pos_x="670" pos_y="365"/>
     <element type="map" name="city" path="city.tmx"/>
