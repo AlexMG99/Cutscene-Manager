@@ -103,9 +103,9 @@ The structure of the XML is the following:
     <cutscene>
 	    <elements>
 		    <element type="map" <!-- Here goes all the map information --> />
-		    <element type="entity" <!-- Here goes all the map information --> />
-		    <element type="image" <!-- Here goes all the map information --> />
-		    <element type="text" <!-- Here goes all the map information --> />
+		    <element type="entity" <!-- Here goes all the entity information --> />
+		    <element type="image" <!-- Here goes all the image information --> />
+		    <element type="text" <!-- Here goes all the text information --> />
 		</elements>
 		<actions>
 			<!-- Here will go all the actions that will execute in the cutscene-->
@@ -321,7 +321,7 @@ Add 3 CutsceneEntity:
 
  1. Gold: His name is gold, and it has to be situated in x=10 and y=340.
  2. Silver: Her name is silver, and it has to be situated in x=670 and y=338.
- 3. Gold: His name is gold, and it has to be situated in x=670 and y=365.
+ 3. Ruby: His name is rival, and it has to be situated in x=670 and y=365.
 
 Structure:
 
