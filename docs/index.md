@@ -363,3 +363,12 @@ Uncomment the code and check functionallity. The result has to be something like
 
 
 [![Video of the final Cutscene](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/video_image.png?raw=true)](https://www.youtube.com/watch?v=WycmxD10BZA)
+
+## Useful links
+https://en.wikipedia.org/wiki/Cutscene
+https://en.oxforddictionaries.com/definition/cutscene
+https://www.gamasutra.com/view/feature/131410/better_game_design_through_.php
+http://www.gamasutra.com/view/feature/131687/the_rules_of_the_game_cutting_cut_.php
+https://www.quora.com/Why-dont-video-games-use-pre-rendered-videos-as-cut-scenes-instead-of-loading-everything-to-make-one
+https://www.quora.com/Are-video-game-cutscenes-made-using-the-game-engine-or-video-making-software
+
