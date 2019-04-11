@@ -1,11 +1,11 @@
 # Cutscene Manager
 I am [Alex Morales Garcia](https://www.linkedin.com/in/alex-morales-garcia-aba47b173/), student of the [Bachelor’s Degree in Video Games by UPC at CITM](https://www.citm.upc.edu/ing/estudis/graus-videojocs/). This content is generated for the second year’s subject Project 2, under supervision of lecturer [Ricard Pillosu](https://es.linkedin.com/in/ricardpillosu).
 
- ## What is a cutscene?
+## What is a cutscene?
  
  A cutscene is a scene in a videogame that may no be interactive, develops the storyline and is shown when a certain event occurs.
  
- ## When do we use it?
+## When do we use it?
  
  **1. Intro**: The initial cutscene in games is the iniTial movie. It introduces the player to the universe, and shows which events lead to the actual situation of the world. There are four different ways to break down the information:
   - Plot: It gives to the player lots of details and information about how he/she get there and what is about to encounter. Example: Command & Conquer
@@ -301,4 +301,52 @@ Example of the xml:
 		</actions>
 	</cutscene>
 
-## Exercises
+You can download the exercises [here](https://github.com/AlexMG99/Cutscene-Manager-Research/releases/tag/V.1.1).
+
+### TODO 1
+Add 3 CutsceneEntity:
+
+ 1. Gold: His name is gold, and it has to be situated in x=10 and y=340.
+ 2. Silver: Her name is silver, and it has to be situated in x=670 and y=338.
+ 3. Gold: His name is gold, and it has to be situated in x=670 and y=365.
+
+Structure:
+
+	<element type="" name="" pos_x="" pos_y=""/>
+		
+### TODO 2
+Add a CutsceneImage, which will be used as a dialog. 
+The name has to be dialog image. The position is {85,265} and the rect {0,0,370,103}. It has to be deactivated when starts.
+
+	<element type="" name ="" pos_x="" pos_y="" rect_x="" rect_y="" rect_w="" rect_h="" active=""/>
+
+### TODO 3
+Create a MoveEntity action. You have to pass the name of the entity which will be affected by it.
+The other parameters are the action type, start time = 0, duration = 4000, speed_x = 88, and speed y = 0. 
+
+	<cutscene action="" entity="">
+      <time start="" duration="" speed_x="" speed_y=""/>
+    </cutscene>
+
+### TODO 4
+Create a new CutsceneEntity which will be load from the xml. Check the CutsceneEntity constructor for more information:
+
+![CutsceneEntity Constructor](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/CutsceneEntity.JPG?raw=true)
+
+### TODO 5
+Create a new CutsceneImage which will be load from the xml. Check the CutsceneImage constructor for more information:
+
+![CutsceneImage Constructor](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/CustceneImage.JPG?raw=true)
+
+### TODO 6
+Create a new CutsceneMoveEntity that will be load from the xml. Check the CutsceneMoveEntity constructor for more information:
+![CutsceneMoveEntity Constructor](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/MoveEntity.JPG?raw=true)
+
+### TODO 7
+Find the corresponding entity depending on the entity_name that has been passed. All the elements are in a map, which first value is a string and a second one is a CutsceneElement. There is a function in maps which is find(). You have to find it by the name and acces to the second element.
+
+### TODO 8
+Uncomment the code and check functionallity. The result has to be something like this:
+
+
+[![Video of the final Cutscene](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/video_image.png?raw=true)](https://www.youtube.com/watch?v=WycmxD10BZA)
