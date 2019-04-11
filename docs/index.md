@@ -64,9 +64,6 @@ Interactive cutscenes involves the player taking control of the player in certai
 ### Live-action 
 Live-action cutscenes involves real actors on a set or in front of a chroma screen.
 
-- Advantages:
-- Disadvantages: 
-
 ## Cutscene in Engines
 I focus mainly in two Engines, Unreal and Unity. In both, you have a time bar, where you can add elements and change it's characateristics and attributes through time. There are key-frames, which are points where you can change the properties of the object. The engine will make an interpolation with the two positions and will generate a smooth transition. The properties that can be changed are rotation, scale, position, state, etc.
 
@@ -344,12 +341,12 @@ The other parameters are the action type, start time = 0, duration = 4000, speed
 ### TODO 4
 Create a new CutsceneEntity which will be load from the xml. Check the CutsceneEntity constructor for more information:
 
-![CutsceneEntity Constructor](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/CutsceneEntity.JPG?raw=true)
+<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/EntityMove.JPG?raw=true">
 
 ### TODO 5
 Create a new CutsceneImage which will be load from the xml. Check the CutsceneImage constructor for more information:
 
-![CutsceneImage Constructor](https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/CustceneImage.JPG?raw=true)
+<img src="https://github.com/AlexMG99/Cutscene-Manager-Research/blob/master/docs/web_images/EntityImage.JPG?raw=true">
 
 ### TODO 6
 Create a new CutsceneMoveEntity that will be load from the xml. Check the CutsceneMoveEntity constructor for more information:
